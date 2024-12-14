@@ -1,21 +1,22 @@
 using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace BT.ScriptablesObject
 {
     public class RuntimeScriptableObject<T> : ScriptableObject
     {
-        private T _value;
+        [ReadOnly][ShowInInspector]private T _value;
         public T Value
         {
             get => _value;
+            [PropertySpace(10)][Button]
             set
             {
                 _value = value;
                 OnChanged?.Invoke();
             }
         }
-
         public event Action OnChanged;
     }
 }
