@@ -4,7 +4,7 @@ using UnityEngine;
 public class WindowManager : MonoBehaviour
 {
     [Header("Settings")]
-    List<WindowItem> windows = new List<WindowItem>();
+    [SerializeField] private List<WindowItem> windows = new List<WindowItem>();
 
     [Header("References")]
     [SerializeField] private RSE_OpenPanel rseOpenPanel;
