@@ -5,6 +5,7 @@ public class SelectPlayer : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private string nameEntity;
+    [SerializeField] private Vector3 offset;
 
     [Header("Output")]
     [SerializeField] private RSO_PlayerSelectedName playerSelectedNameRSO;
@@ -24,7 +25,7 @@ public class SelectPlayer : MonoBehaviour
     private void SetTarget()
     {
         playerSelectedNameRSO.Value = nameEntity;
-        playerSelectedPositionRSO.Value = transform.position;
+        playerSelectedPositionRSO.Value = transform.position - offset;
 
         playerSelectedRSE.Call();
     }
