@@ -10,6 +10,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private RSO_PlayerSelectedPosition playerSelectedPositionRSO;
     [SerializeField] private RSO_BallStartPosition ballStartPositionRSO;
     [SerializeField] private RSO_PlayerSelectedName playerSelectedNameRSO;
+    [SerializeField] private RSE_AddGameAction addGameActionRSE;
 
     [Header("Input")]
     [SerializeField] private RSE_PlayerSelected playerSelectedRSE;
@@ -42,7 +43,8 @@ public class Ball : MonoBehaviour
     /// </summary>
     private void MoveBall()
     {
-        //GameAction currentAction = new GameAction();
+        //GameAction currentAction = new GameAction("Player", "Throw", "Bot3");
+        //addGameActionRSE.Call(currentAction);
 
         ballCurrentEntityRSO.Value = null;
 
