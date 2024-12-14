@@ -8,6 +8,7 @@ public class DialoguePlayer : MonoBehaviour
     [SerializeField] private TMP_Text dialoguePlayerText;
     [Header("References")]
     [SerializeField] RSO_GameParameter RSO_GameParameter;
+    [SerializeField] TMP_Text textScrollView;
 
     //[Space(10)]
     // RSO
@@ -59,8 +60,10 @@ public class DialoguePlayer : MonoBehaviour
 
         if (!string.IsNullOrEmpty(userInput))
         {
-            GameAction action = new GameAction("player 1", "sendMessage", "content:" + userInput);
+            GameAction action = new GameAction("player2", "sendMessage", "content:" + userInput);
             rseAddGameAction.Call(action);
+
+            textScrollView.text += "[Player2]: " + userInput +"\n";
 
             DisplayDialogue(userInput);
             inputField.text = "";

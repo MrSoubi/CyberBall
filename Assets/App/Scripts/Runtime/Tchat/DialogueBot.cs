@@ -11,6 +11,8 @@ public class DialogueBot : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] RSO_GameParameter RSO_GameParameter;
     [SerializeField] GameObject bubbleObject;
+    [SerializeField] TMP_Text textScrollView;
+
 
     [Space(10)]
     //RSO
@@ -75,6 +77,7 @@ public class DialogueBot : MonoBehaviour
             DisplayDialogue(text);
             //var tchat = new TchatOut();
 
+            textScrollView.text += $"[{botName}]: " + text + "\n";
 
 
             //tchat.MessageContent = text;
