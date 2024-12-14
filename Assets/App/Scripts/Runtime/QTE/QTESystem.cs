@@ -19,8 +19,10 @@ public class QTESystem : MonoBehaviour
 
     [Header("Input")]
     [SerializeField] private RSE_PlayerSelected eventPlayerSelected;
-    
+
     [Header("Output")]
+    [SerializeField] private RSE_QTESucced eventQTESucced;
+    [SerializeField] private RSE_QTEFailed eventQTEFailed;
     [SerializeField] private RSO_ScoreMaxQTE scoreMaxQTE;
     [SerializeField] private RSO_CurrentScoreQTE currentScoreQTE;
     [SerializeField] private RSO_ValidKeyCodeQTE validKeyCodeQTE;
@@ -69,7 +71,7 @@ public class QTESystem : MonoBehaviour
         }
         else
         {
-            Debug.Log("Win");
+            eventQTESucced.Call();
             QTERunning = false;
             StopAllCoroutines();
             scoreMax = 10;
@@ -101,7 +103,7 @@ public class QTESystem : MonoBehaviour
         }
         else
         {
-            //Lance la balle
+            eventQTESucced.Call();
         }
     }
 
@@ -109,7 +111,7 @@ public class QTESystem : MonoBehaviour
     IEnumerator StartQTECountdown(float delay)
     {
         yield return new WaitForSecondsRealtime(delay);
-        Debug.Log("Fin du Timer");
+        eventQTEFailed.Call();
         QTERunning = false;
     }
 }
