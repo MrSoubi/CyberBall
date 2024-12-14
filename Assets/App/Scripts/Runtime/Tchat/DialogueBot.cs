@@ -6,13 +6,11 @@ using System.Globalization;
 public class DialogueBot : MonoBehaviour
 {
     //[Header("Settings")]
-    [SerializeField] private Vector2 padding;
-    [SerializeField] string nameBot;
 
     //[Header("References")]
-    [SerializeField] private RectTransform dialogueBubble;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] RSO_GameParameter RSO_GameParameter;
+    [SerializeField] GameObject bubbleObject;
 
     [Space(10)]
     //RSO
@@ -33,7 +31,17 @@ public class DialogueBot : MonoBehaviour
 
     void Start()
     {
-        
+        bubbleObject.gameObject.SetActive(false);
+
+
+
+        //OnBotSendText("text");
+    }
+
+    private void Update()
+    {
+        //Debug.Log("xxxx");
+
     }
 
     void DisplayDialogue(string text)
@@ -43,37 +51,36 @@ public class DialogueBot : MonoBehaviour
 
         dialogueText.text = text;
 
-        dialogueText.ForceMeshUpdate();
-        Vector2 textSize = dialogueText.GetRenderedValues(false);
-        dialogueBubble.sizeDelta = textSize + padding;
 
-        gameObject.SetActive(true);
+        bubbleObject.gameObject.SetActive(true);
 
-        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(RSO_GameParameter.Value.default_chat_duration));
+        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(2f/*RSO_GameParameter.Value.default_chat_duration*/));
     }
 
     IEnumerator HideBubbleAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        gameObject.SetActive(false);
+        bubbleObject.gameObject.SetActive(false);
 
     }
 
 
     public void OnBotSendText(string text)
     {
-
+        //Debug.Log(text);
         if (!string.IsNullOrEmpty(text))
         {
+            //Debug.Log(text);
+
             DisplayDialogue(text);
-            var tchat = new TchatOut();
+            //var tchat = new TchatOut();
 
 
 
-            tchat.MessageContent = text;
-            ListMessageOut.Value.Add(tchat);
+            //tchat.MessageContent = text;
+            //ListMessageOut.Value.Add(tchat);
 
-            GameAction action = new GameAction(nameBot, "sendMessage", "content:" + text);
+            GameAction action = new GameAction("bot", "sendMessage", "content:" + text);
             rseAddGameAction.Call(action);
         }
     }

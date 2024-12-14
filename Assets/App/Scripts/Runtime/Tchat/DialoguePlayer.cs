@@ -5,11 +5,8 @@ public class DialoguePlayer : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private TMP_InputField inputField;
-    [SerializeField] private RectTransform dialogueBubble;
     [SerializeField] private TMP_Text dialoguePlayerText;
     [Header("References")]
-    [SerializeField] private Vector2 padding;
-    [SerializeField] private RSO_ListMessageOut ListMessageOut;
     [SerializeField] RSO_GameParameter RSO_GameParameter;
 
     //[Space(10)]
@@ -40,13 +37,10 @@ public class DialoguePlayer : MonoBehaviour
 
         dialoguePlayerText.text = text;
 
-        dialoguePlayerText.ForceMeshUpdate();
-        Vector2 textSize = dialoguePlayerText.GetRenderedValues(false);
-        dialogueBubble.sizeDelta = textSize + padding;
 
         gameObject.SetActive(true);
 
-        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(RSO_GameParameter.Value.default_chat_duration));
+        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(2f/*RSO_GameParameter.Value.default_chat_duration*/));
     }
 
     IEnumerator HideBubbleAfterDelay(float delay)
@@ -68,13 +62,12 @@ public class DialoguePlayer : MonoBehaviour
             GameAction action = new GameAction("player 1", "sendMessage", "content:" + userInput);
             rseAddGameAction.Call(action);
 
-
             DisplayDialogue(userInput);
             inputField.text = "";
 
-            var tchat = new TchatOut();
-            tchat.MessageContent = userInput;
-            ListMessageOut.Value.Add(tchat);
+            //var tchat = new TchatOut();
+            //tchat.MessageContent = userInput;
+            //ListMessageOut.Value.Add(tchat);
         }
     }
 
