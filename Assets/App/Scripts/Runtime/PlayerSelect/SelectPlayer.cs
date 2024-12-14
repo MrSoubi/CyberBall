@@ -9,7 +9,7 @@ public class SelectPlayer : MonoBehaviour
     [Header("Output")]
     [SerializeField] private RSO_PlayerSelectedName playerSelectedNameRSO;
     [SerializeField] private RSO_PlayerSelectedPosition playerSelectedPositionRSO;
-    [SerializeField] private RSE_PlayerSelected playerSelectedRSE;
+    [SerializeField] private RSE_QTECall qTECallRSE;
     [SerializeField] private RSO_BallCurrentEntity ballCurrentEntityRSO;
     [SerializeField] private RSO_PlayerName playerNameRSO;
 
@@ -28,7 +28,7 @@ public class SelectPlayer : MonoBehaviour
             playerSelectedNameRSO.Value = gameObject.name;
             playerSelectedPositionRSO.Value = transform.position - offset;
 
-            playerSelectedRSE.Call();
+            qTECallRSE.Call();
         }
     }
 }

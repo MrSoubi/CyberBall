@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        if (RSO_GameParameter.Value.is_chat_enabled == true)
+        if (RSO_GameParameter.Value.is_chat_enabled == false)
         {
             GameTchat.SetActive(true);
 
@@ -91,5 +91,15 @@ public class DialogueManager : MonoBehaviour
         }
 
        
+    }
+
+    private void OnEnable()
+    {
+        OnBallThrow.action += DisplayBotMessage;
+    }
+
+    private void OnDisable()
+    {
+        OnBallThrow.action -= DisplayBotMessage;
     }
 }
