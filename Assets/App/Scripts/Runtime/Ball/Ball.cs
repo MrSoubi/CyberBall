@@ -10,9 +10,13 @@ public class Ball : MonoBehaviour
     [SerializeField] private RSO_PlayerSelectedPosition playerSelectedPositionRSO;
     [SerializeField] private RSO_BallStartPosition ballStartPositionRSO;
     [SerializeField] private RSO_PlayerSelectedName playerSelectedNameRSO;
+    [SerializeField] private RSE_AddGameAction addGameActionRSE;
 
     [Header("Input")]
     [SerializeField] private RSE_PlayerSelected playerSelectedRSE;
+    [SerializeField] private RSE_BallCatch ballCatchRSE;
+    [SerializeField] private RSE_OnBallThrow onBallThrowRSE;
+    [SerializeField] private RSO_BallThrowCount ballThrowCountRSO;
     [SerializeField] private RSO_BallCurrentEntity ballCurrentEntityRSO;
 
     private Vector3 posOrigin;
@@ -42,7 +46,11 @@ public class Ball : MonoBehaviour
     /// </summary>
     private void MoveBall()
     {
-        //GameAction currentAction = new GameAction();
+        GameAction currentAction = new GameAction(ballCurrentEntityRSO.Value, "Throw", playerSelectedNameRSO.Value);
+        addGameActionRSE.Call(currentAction);
+
+        ballThrowCountRSO.Value += 1;
+        onBallThrowRSE.Call();
 
         ballCurrentEntityRSO.Value = null;
 
@@ -54,7 +62,7 @@ public class Ball : MonoBehaviour
 
     private IEnumerator Move()
     {
-        while(Vector3.Distance(transform.position, posTarget) > 0.01f)
+        while (Vector3.Distance(transform.position, posTarget) > 0.01f)
         {
             transform.position = Vector3.MoveTowards(transform.position, posTarget, speed * Time.deltaTime);
 
@@ -64,5 +72,10 @@ public class Ball : MonoBehaviour
         transform.position = posTarget;
 
         ballCurrentEntityRSO.Value = playerSelectedNameRSO.Value;
+
+        ballCatchRSE.Call();
+
+        GameAction currentAction = new GameAction(ballCurrentEntityRSO.Value, "Catch");
+        addGameActionRSE.Call(currentAction);
     }
 }

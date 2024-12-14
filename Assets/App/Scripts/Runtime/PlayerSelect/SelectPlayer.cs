@@ -10,6 +10,8 @@ public class SelectPlayer : MonoBehaviour
     [SerializeField] private RSO_PlayerSelectedName playerSelectedNameRSO;
     [SerializeField] private RSO_PlayerSelectedPosition playerSelectedPositionRSO;
     [SerializeField] private RSE_PlayerSelected playerSelectedRSE;
+    [SerializeField] private RSO_BallCurrentEntity ballCurrentEntityRSO;
+    [SerializeField] private RSO_PlayerName playerNameRSO;
 
     private void OnMouseDown()
     {
@@ -19,12 +21,14 @@ public class SelectPlayer : MonoBehaviour
     /// <summary>
     /// Set the Target Selected
     /// </summary>
-    [Button]
     private void SetTarget()
     {
-        playerSelectedNameRSO.Value = gameObject.name;
-        playerSelectedPositionRSO.Value = transform.position - offset;
+        if(ballCurrentEntityRSO.Value == playerNameRSO.Value)
+        {
+            playerSelectedNameRSO.Value = gameObject.name;
+            playerSelectedPositionRSO.Value = transform.position - offset;
 
-        playerSelectedRSE.Call();
+            playerSelectedRSE.Call();
+        }
     }
 }

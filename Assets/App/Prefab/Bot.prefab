@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4410566935525130608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4408585471588256184}
+  - component: {fileID: 7318019469711268527}
+  - component: {fileID: 2981805231829071378}
+  - component: {fileID: 8327156004523897275}
+  - component: {fileID: 8335286125010348240}
+  - component: {fileID: 6477741381754877822}
+  m_Layer: 0
+  m_Name: Bot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4408585471588256184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4410566935525130608}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &7318019469711268527
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4410566935525130608}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &2981805231829071378
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4410566935525130608}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &8327156004523897275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4410566935525130608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c983b8e048e949749a2cb494d77ca027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 1, z: 0}
+  playerSelectedNameRSO: {fileID: 11400000, guid: 1f9a17ccab62c4f44b98c4ea6ba85a31, type: 2}
+  playerSelectedPositionRSO: {fileID: 11400000, guid: 308a7a3647dfdfc408932cbcffdc9184, type: 2}
+  playerSelectedRSE: {fileID: 11400000, guid: 60629f21c2833aa4ca88bbe4d080e0b8, type: 2}
+  ballCurrentEntityRSO: {fileID: 11400000, guid: 3da4f17468bdf1746ac22f21b9d64373, type: 2}
+  playerNameRSO: {fileID: 11400000, guid: 5433b32230b07654484c29a90e7237e3, type: 2}
+--- !u!114 &8335286125010348240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4410566935525130608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20df4cc2f5c0bba44aaf0d3d11285d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  haveBall: 0
+  isPlayer: 0
+  offset: {x: 0, y: 1, z: 0}
+  playerNameRSO: {fileID: 11400000, guid: 5433b32230b07654484c29a90e7237e3, type: 2}
+  playerNameListRSO: {fileID: 11400000, guid: 68d22d361843044439e83dc8b040e249, type: 2}
+  playerPositionListRSO: {fileID: 11400000, guid: 3f40ad88e7e757f4c89e3bb63bc044b8, type: 2}
+  playerOffsetListRSO: {fileID: 11400000, guid: 1e617524ff3cbf8489dbab3f012ae786, type: 2}
+  ballCurrentEntityRSO: {fileID: 11400000, guid: 3da4f17468bdf1746ac22f21b9d64373, type: 2}
+  ballStartPositionRSO: {fileID: 11400000, guid: 599e887c5384a10479ccad068c735709, type: 2}
+--- !u!114 &6477741381754877822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4410566935525130608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2d696d88261ac42895d7e12a8b6526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coolDownBeforeThrow: {fileID: 11400000, guid: 31b1b1a86af25e84b93c24c3f54e77d5, type: 2}
+  _playerNameList: {fileID: 11400000, guid: 68d22d361843044439e83dc8b040e249, type: 2}
+  _playerPositionList: {fileID: 11400000, guid: 3f40ad88e7e757f4c89e3bb63bc044b8, type: 2}
+  _playerOffsetList: {fileID: 11400000, guid: 1e617524ff3cbf8489dbab3f012ae786, type: 2}
+  playerSelectedNameRSO: {fileID: 11400000, guid: 1f9a17ccab62c4f44b98c4ea6ba85a31, type: 2}
+  playerSelectedPositionRSO: {fileID: 11400000, guid: 308a7a3647dfdfc408932cbcffdc9184, type: 2}
+  playerSelectedRSE: {fileID: 11400000, guid: 60629f21c2833aa4ca88bbe4d080e0b8, type: 2}
+  RSO_BallCurrentEntity: {fileID: 11400000, guid: 3da4f17468bdf1746ac22f21b9d64373, type: 2}
+  ballCatchRSE: {fileID: 11400000, guid: 39cf95260db20b242abd616d65d49cf5, type: 2}
