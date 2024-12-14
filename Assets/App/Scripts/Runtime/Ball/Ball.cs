@@ -14,6 +14,7 @@ public class Ball : MonoBehaviour
 
     [Header("Input")]
     [SerializeField] private RSE_PlayerSelected playerSelectedRSE;
+    [SerializeField] private RSE_BallCatch ballCatchRSE;
     [SerializeField] private RSO_BallCurrentEntity ballCurrentEntityRSO;
 
     private Vector3 posOrigin;
@@ -66,5 +67,7 @@ public class Ball : MonoBehaviour
         transform.position = posTarget;
 
         ballCurrentEntityRSO.Value = playerSelectedNameRSO.Value;
+
+        ballCatchRSE.Call();
     }
 }
