@@ -20,6 +20,11 @@ public class CustomUIButton : MonoBehaviour, IPointerDownHandler, IPointerEnterH
     [Header("Output")]
     [SerializeField] private UnityEvent onClick;
 
+    public void EnableButton()
+    {
+        gameObject.SetActive(true);
+    }
+
     public void OnPointerEnter(PointerEventData data)
     {
         if (onButtonHoverClip != null) animator.Play(onButtonHoverClip.name);
