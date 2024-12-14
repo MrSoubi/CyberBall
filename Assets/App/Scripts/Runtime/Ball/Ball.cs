@@ -6,9 +6,14 @@ public class Ball : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float speed;
 
+    [Header("Output")]
+    [SerializeField] private RSO_PlayerSelectedPosition playerSelectedPositionRSO;
+    [SerializeField] private RSO_BallStartPosition ballStartPositionRSO;
+    [SerializeField] private RSO_PlayerSelectedName playerSelectedNameRSO;
+
     [Header("Input")]
     [SerializeField] private RSE_PlayerSelected playerSelectedRSE;
-    [SerializeField] private RSO_PlayerSelectedPosition playerSelectedPositionRSO;
+    [SerializeField] private RSO_BallCurrentEntity ballCurrentEntityRSO;
 
     private Vector3 posOrigin;
     private Vector3 posStart;
@@ -16,6 +21,8 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
+        transform.position = ballStartPositionRSO.Value;
+
         posOrigin = transform.position;
         posStart = transform.position;
     }
@@ -35,6 +42,10 @@ public class Ball : MonoBehaviour
     /// </summary>
     private void MoveBall()
     {
+        //GameAction currentAction = new GameAction();
+
+        ballCurrentEntityRSO.Value = null;
+
         posStart = transform.position;
         posTarget = playerSelectedPositionRSO.Value;
 
@@ -51,5 +62,7 @@ public class Ball : MonoBehaviour
         }
 
         transform.position = posTarget;
+
+        ballCurrentEntityRSO.Value = playerSelectedNameRSO.Value;
     }
 }

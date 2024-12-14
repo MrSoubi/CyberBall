@@ -4,7 +4,6 @@ using UnityEngine;
 public class SelectPlayer : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private string nameEntity;
     [SerializeField] private Vector3 offset;
 
     [Header("Output")]
@@ -15,7 +14,6 @@ public class SelectPlayer : MonoBehaviour
     private void OnMouseDown()
     {
         SetTarget();
-
     }
 
     /// <summary>
@@ -24,7 +22,7 @@ public class SelectPlayer : MonoBehaviour
     [Button]
     private void SetTarget()
     {
-        playerSelectedNameRSO.Value = nameEntity;
+        playerSelectedNameRSO.Value = gameObject.name;
         playerSelectedPositionRSO.Value = transform.position - offset;
 
         playerSelectedRSE.Call();
