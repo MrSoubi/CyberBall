@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66250ecbc8445bb4d81e51f98fb6a963, type: 3}
-  m_Name: RSO_ListMessageOut
+  m_Script: {fileID: 11500000, guid: ef51a89c7cb20c1469f2effa9fdfdc99, type: 3}
+  m_Name: RSE_OnBot2MessageSend
   m_EditorClassIdentifier: 

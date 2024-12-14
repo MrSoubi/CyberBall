@@ -23,6 +23,8 @@ public class Bot : MonoBehaviour
 
     //[Header("Input")]
     [SerializeField] private RSE_BallCatch ballCatchRSE;
+    [SerializeField] private RSE_OnBotMessageSend OnBotMessageSend;
+
 
     //[Header("Output")]
 
@@ -40,7 +42,6 @@ public class Bot : MonoBehaviour
     {
         if (RSO_BallCurrentEntity.Value == gameObject.name && !throwBall)
         {
-            Debug.Log("t");
 
             throwBall = true;
 
