@@ -152,7 +152,7 @@ MonoBehaviour:
   offset: {x: 0, y: 1, z: 0}
   playerSelectedNameRSO: {fileID: 11400000, guid: 1f9a17ccab62c4f44b98c4ea6ba85a31, type: 2}
   playerSelectedPositionRSO: {fileID: 11400000, guid: 308a7a3647dfdfc408932cbcffdc9184, type: 2}
-  playerSelectedRSE: {fileID: 11400000, guid: 60629f21c2833aa4ca88bbe4d080e0b8, type: 2}
+  qTECallRSE: {fileID: 11400000, guid: 89bdaf7e584c2c44c80de95a1aa8c811, type: 2}
   ballCurrentEntityRSO: {fileID: 11400000, guid: 3da4f17468bdf1746ac22f21b9d64373, type: 2}
   playerNameRSO: {fileID: 11400000, guid: 5433b32230b07654484c29a90e7237e3, type: 2}
 --- !u!114 &8335286125010348240
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20df4cc2f5c0bba44aaf0d3d11285d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  haveBall: 0
+  startBall: 0
   isPlayer: 0
   offset: {x: 0, y: 1, z: 0}
   playerNameRSO: {fileID: 11400000, guid: 5433b32230b07654484c29a90e7237e3, type: 2}
@@ -197,3 +197,5 @@ MonoBehaviour:
   playerSelectedRSE: {fileID: 11400000, guid: 60629f21c2833aa4ca88bbe4d080e0b8, type: 2}
   RSO_BallCurrentEntity: {fileID: 11400000, guid: 3da4f17468bdf1746ac22f21b9d64373, type: 2}
   ballCatchRSE: {fileID: 11400000, guid: 39cf95260db20b242abd616d65d49cf5, type: 2}
+  OnBotMessageSend: {fileID: 0}
+  throwBall: 0

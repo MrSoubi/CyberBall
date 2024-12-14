@@ -18,6 +18,8 @@ public class Ball : MonoBehaviour
     [SerializeField] private RSE_OnBallThrow onBallThrowRSE;
     [SerializeField] private RSO_BallThrowCount ballThrowCountRSO;
     [SerializeField] private RSO_BallCurrentEntity ballCurrentEntityRSO;
+    [SerializeField] private RSE_QTESucced qTESuccedRSE;
+    [SerializeField] private RSE_QTEFailed qTEFailedRSE;
 
     private Vector3 posOrigin;
     private Vector3 posStart;
@@ -34,11 +36,34 @@ public class Ball : MonoBehaviour
     private void OnEnable()
     {
         playerSelectedRSE.action += MoveBall;
+        qTESuccedRSE.action += MoveBall;
+
+        qTEFailedRSE.action += TPBall;
     }
 
     private void OnDisable()
     {
         playerSelectedRSE.action -= MoveBall;
+        qTESuccedRSE.action -= MoveBall;
+
+        qTEFailedRSE.action -= TPBall;
+    }
+
+    /// <summary>
+    /// Tp the Ball to a Random Bot
+    /// </summary>
+    private void TPBall()
+    {
+        ballCurrentEntityRSO.Value = null;
+
+        posStart = transform.position;
+        posTarget = playerSelectedPositionRSO.Value;
+
+        transform.position = posTarget;
+
+        ballCurrentEntityRSO.Value = playerSelectedNameRSO.Value;
+
+        ballCatchRSE.Call();
     }
 
     /// <summary>

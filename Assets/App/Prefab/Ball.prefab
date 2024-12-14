@@ -110,3 +110,5 @@ MonoBehaviour:
   onBallThrowRSE: {fileID: 11400000, guid: a6ac3f863252625429fcf5c70bd25780, type: 2}
   ballThrowCountRSO: {fileID: 11400000, guid: 57fcbb9f3ebcc664fa832c03c2aa315d, type: 2}
   ballCurrentEntityRSO: {fileID: 11400000, guid: 3da4f17468bdf1746ac22f21b9d64373, type: 2}
+  qTESuccedRSE: {fileID: 11400000, guid: 095ee3808ad77624d82ccdeca444b9e3, type: 2}
+  qTEFailedRSE: {fileID: 11400000, guid: 39f1a15bf01a96144aecc4a2a39e28fc, type: 2}

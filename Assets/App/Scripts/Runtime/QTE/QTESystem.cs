@@ -18,7 +18,7 @@ public class QTESystem : MonoBehaviour
     //[Header("References")]
 
     [Header("Input")]
-    [SerializeField] private RSE_PlayerSelected eventPlayerSelected;
+    [SerializeField] private RSE_QTECall eventQTECall;
 
     [Header("Output")]
     [SerializeField] private RSE_QTESucced eventQTESucced;
@@ -28,12 +28,12 @@ public class QTESystem : MonoBehaviour
     [SerializeField] private RSO_ValidKeyCodeQTE validKeyCodeQTE;
     private void OnEnable()
     {
-        eventPlayerSelected.action += CheckLaunchQTE;
+        eventQTECall.action += CheckLaunchQTE;
     }
 
     private void OnDisable()
     {
-        eventPlayerSelected.action -= CheckLaunchQTE;
+        eventQTECall.action -= CheckLaunchQTE;
     }
     private void Start()
     {
