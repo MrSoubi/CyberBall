@@ -68,8 +68,22 @@ public class DialogueManager : MonoBehaviour
                 commentsBot2.Add(comment);
             }
         }
-    }
+        //var commente = new Comment();
+        //commente.bot_id = 0;
+        //commente.text = "fffffff";
+        //commente.throw_id = 1;
+        //commentsBot1.Add(commente);
+        //OnBot1MessageSend.Call(commente.text);
+        //OnBot1MessageSend.Call("cccccdcdc");
+        //OnBot2MessageSend.Call("qqqqqq");
+        //OnBot2MessageSend.Call("qqqqqq");
 
+    }
+    private void Update()
+    {
+        //OnBot1MessageSend.Call("cccccdcdc");
+        //OnBot2MessageSend.Call("qqqqqq");
+    }
     void DisplayBotMessage()
     {
  
