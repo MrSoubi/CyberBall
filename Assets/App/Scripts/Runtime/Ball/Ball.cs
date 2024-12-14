@@ -15,6 +15,8 @@ public class Ball : MonoBehaviour
     [Header("Input")]
     [SerializeField] private RSE_PlayerSelected playerSelectedRSE;
     [SerializeField] private RSE_BallCatch ballCatchRSE;
+    [SerializeField] private RSE_OnBallThrow onBallThrowRSE;
+    [SerializeField] private RSO_BallThrowCount ballThrowCountRSO;
     [SerializeField] private RSO_BallCurrentEntity ballCurrentEntityRSO;
 
     private Vector3 posOrigin;
@@ -46,6 +48,9 @@ public class Ball : MonoBehaviour
     {
         GameAction currentAction = new GameAction(ballCurrentEntityRSO.Value, "Throw", playerSelectedNameRSO.Value);
         addGameActionRSE.Call(currentAction);
+
+        ballThrowCountRSO.Value += 1;
+        onBallThrowRSE.Call();
 
         ballCurrentEntityRSO.Value = null;
 

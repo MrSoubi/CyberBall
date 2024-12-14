@@ -107,4 +107,6 @@ MonoBehaviour:
   addGameActionRSE: {fileID: 11400000, guid: 4bed567abc4913d4ba08c395f9cd02c7, type: 2}
   playerSelectedRSE: {fileID: 11400000, guid: 60629f21c2833aa4ca88bbe4d080e0b8, type: 2}
   ballCatchRSE: {fileID: 11400000, guid: 39cf95260db20b242abd616d65d49cf5, type: 2}
+  onBallThrowRSE: {fileID: 11400000, guid: a6ac3f863252625429fcf5c70bd25780, type: 2}
+  ballThrowCountRSO: {fileID: 11400000, guid: 57fcbb9f3ebcc664fa832c03c2aa315d, type: 2}
   ballCurrentEntityRSO: {fileID: 11400000, guid: 3da4f17468bdf1746ac22f21b9d64373, type: 2}
