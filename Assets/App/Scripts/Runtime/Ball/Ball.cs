@@ -44,8 +44,8 @@ public class Ball : MonoBehaviour
     /// </summary>
     private void MoveBall()
     {
-        //GameAction currentAction = new GameAction("Player", "Throw", "Bot3");
-        //addGameActionRSE.Call(currentAction);
+        GameAction currentAction = new GameAction(ballCurrentEntityRSO.Value, "Throw", playerSelectedNameRSO.Value);
+        addGameActionRSE.Call(currentAction);
 
         ballCurrentEntityRSO.Value = null;
 
@@ -69,5 +69,8 @@ public class Ball : MonoBehaviour
         ballCurrentEntityRSO.Value = playerSelectedNameRSO.Value;
 
         ballCatchRSE.Call();
+
+        GameAction currentAction = new GameAction(ballCurrentEntityRSO.Value, "Catch");
+        addGameActionRSE.Call(currentAction);
     }
 }
