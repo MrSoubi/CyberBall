@@ -6,7 +6,7 @@ using System.Globalization;
 public class DialogueBot : MonoBehaviour
 {
     //[Header("Settings")]
-
+    [SerializeField] string botName;
     //[Header("References")]
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] RSO_GameParameter RSO_GameParameter;
@@ -54,7 +54,7 @@ public class DialogueBot : MonoBehaviour
 
         bubbleObject.gameObject.SetActive(true);
 
-        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(2f/*RSO_GameParameter.Value.default_chat_duration*/));
+        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(RSO_GameParameter.Value.default_chat_duration  /*2f*/));
     }
 
     IEnumerator HideBubbleAfterDelay(float delay)
@@ -80,7 +80,7 @@ public class DialogueBot : MonoBehaviour
             //tchat.MessageContent = text;
             //ListMessageOut.Value.Add(tchat);
 
-            GameAction action = new GameAction("bot", "sendMessage", "content:" + text);
+            GameAction action = new GameAction(botName, "sendMessage", "content:" + text);
             rseAddGameAction.Call(action);
         }
     }

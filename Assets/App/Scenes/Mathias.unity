@@ -1401,6 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a756fc5117e6a47bc19313bfd62a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  botName: 
   dialogueText: {fileID: 260521099}
   RSO_GameParameter: {fileID: 11400000, guid: 64b1ed078971011468d9d4fc2903ad9c, type: 2}
   bubbleObject: {fileID: 0}
@@ -1771,6 +1772,14 @@ PrefabInstance:
       propertyPath: OnBotMessageSend
       value: 
       objectReference: {fileID: 11400000, guid: 63a4384b92afa3a4f9c9155443a78611, type: 2}
+    - target: {fileID: 8327156004523897275, guid: 08719b5525a11284fb26d4b2d74b0165, type: 3}
+      propertyPath: dictBallReceiveCountRSO
+      value: 
+      objectReference: {fileID: 11400000, guid: ad487c71231c0764886234936250ebe9, type: 2}
+    - target: {fileID: 8327156004523897275, guid: 08719b5525a11284fb26d4b2d74b0165, type: 3}
+      propertyPath: playerBallReceiveCountRSO
+      value: 
+      objectReference: {fileID: 11400000, guid: b50e4480e4a43044ebc037cee6040e74, type: 2}
     - target: {fileID: 8335286125010348240, guid: 08719b5525a11284fb26d4b2d74b0165, type: 3}
       propertyPath: haveBall
       value: 1
@@ -1916,8 +1925,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5903855284691423072, guid: eab74793ab2d32d499317aeeeb0eafc1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 493920066}
   m_SourcePrefab: {fileID: 100100000, guid: eab74793ab2d32d499317aeeeb0eafc1, type: 3}
+--- !u!1 &493920065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5903855284691423072, guid: eab74793ab2d32d499317aeeeb0eafc1, type: 3}
+  m_PrefabInstance: {fileID: 493920064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &493920066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493920065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a41e0fab34b144c9d8e1322d6deaf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &496071027
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,6 +2388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a756fc5117e6a47bc19313bfd62a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  botName: Bot1
   dialogueText: {fileID: 209124181}
   RSO_GameParameter: {fileID: 11400000, guid: 64b1ed078971011468d9d4fc2903ad9c, type: 2}
   bubbleObject: {fileID: 621369754}
@@ -3108,56 +3138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
---- !u!1 &982177518
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 982177520}
-  - component: {fileID: 982177521}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &982177520
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982177518}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 655.9332, y: 445.95972, z: -4.710981}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &982177521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982177518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28a756fc5117e6a47bc19313bfd62a01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueText: {fileID: 0}
-  RSO_GameParameter: {fileID: 0}
-  bubbleObject: {fileID: 0}
-  ListMessageOut: {fileID: 0}
-  OnBotMessageSend: {fileID: 0}
-  rseAddGameAction: {fileID: 0}
 --- !u!1 &1045687465
 GameObject:
   m_ObjectHideFlags: 0
@@ -3448,8 +3428,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5bdfb51ec79c84b97e4abd5521dbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idBot1: 1
+  idBot2: 2
   RSO_GameParameter: {fileID: 11400000, guid: 64b1ed078971011468d9d4fc2903ad9c, type: 2}
-  RSO_ListMessageIn: {fileID: 0}
   GameTchat: {fileID: 1094517273}
   OnBot1MessageSend: {fileID: 11400000, guid: 63a4384b92afa3a4f9c9155443a78611, type: 2}
   OnBot2MessageSend: {fileID: 11400000, guid: 2af6ac9a15f0d7241a2aa7b4e994fbf0, type: 2}
@@ -3788,6 +3769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a756fc5117e6a47bc19313bfd62a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  botName: 
   dialogueText: {fileID: 1045687467}
   RSO_GameParameter: {fileID: 11400000, guid: 64b1ed078971011468d9d4fc2903ad9c, type: 2}
   bubbleObject: {fileID: 0}
@@ -4293,6 +4275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a756fc5117e6a47bc19313bfd62a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  botName: Bot2
   dialogueText: {fileID: 1384084772}
   RSO_GameParameter: {fileID: 11400000, guid: 64b1ed078971011468d9d4fc2903ad9c, type: 2}
   bubbleObject: {fileID: 287475550}
@@ -4352,4 +4335,3 @@ SceneRoots:
   - {fileID: 1468195981}
   - {fileID: 493920064}
   - {fileID: 1719859127}
-  - {fileID: 982177520}

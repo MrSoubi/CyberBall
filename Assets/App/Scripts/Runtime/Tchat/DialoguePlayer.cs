@@ -40,7 +40,7 @@ public class DialoguePlayer : MonoBehaviour
 
         gameObject.SetActive(true);
 
-        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(2f/*RSO_GameParameter.Value.default_chat_duration*/));
+        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(/*2f*/RSO_GameParameter.Value.default_chat_duration));
     }
 
     IEnumerator HideBubbleAfterDelay(float delay)
