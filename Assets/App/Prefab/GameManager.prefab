@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a389eaaae62c145a88b1834e67b1b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rsoGameParametter: {fileID: 11400000, guid: 64b1ed078971011468d9d4fc2903ad9c, type: 2}
+  rsoGameParameter: {fileID: 11400000, guid: 64b1ed078971011468d9d4fc2903ad9c, type: 2}
 --- !u!114 &6231671778981220824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,5 +58,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae39f85361dd324498e346b7c0339db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rsoGameParametter: {fileID: 11400000, guid: 64b1ed078971011468d9d4fc2903ad9c, type: 2}
+  rsoGameParameter: {fileID: 11400000, guid: 64b1ed078971011468d9d4fc2903ad9c, type: 2}
   rseFilePath: {fileID: 11400000, guid: 78b56d902a723234b87d41d994983118, type: 2}
