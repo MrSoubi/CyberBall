@@ -42,7 +42,6 @@ public class Bot : MonoBehaviour
     {
         if (RSO_BallCurrentEntity.Value == gameObject.name && !throwBall)
         {
-
             throwBall = true;
 
             StartCoroutine(CooldownBeforeThrow());
