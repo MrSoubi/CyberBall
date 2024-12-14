@@ -57,7 +57,7 @@ public class Ball : MonoBehaviour
 
     private IEnumerator Move()
     {
-        while(Vector3.Distance(transform.position, posTarget) > 0.01f)
+        while (Vector3.Distance(transform.position, posTarget) > 0.01f)
         {
             transform.position = Vector3.MoveTowards(transform.position, posTarget, speed * Time.deltaTime);
 

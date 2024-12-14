@@ -106,5 +106,6 @@ MonoBehaviour:
   playerNameRSO: {fileID: 11400000, guid: 5433b32230b07654484c29a90e7237e3, type: 2}
   playerNameListRSO: {fileID: 11400000, guid: 68d22d361843044439e83dc8b040e249, type: 2}
   playerPositionListRSO: {fileID: 11400000, guid: 3f40ad88e7e757f4c89e3bb63bc044b8, type: 2}
+  playerOffsetListRSO: {fileID: 11400000, guid: 1e617524ff3cbf8489dbab3f012ae786, type: 2}
   ballCurrentEntityRSO: {fileID: 11400000, guid: 3da4f17468bdf1746ac22f21b9d64373, type: 2}
   ballStartPositionRSO: {fileID: 11400000, guid: 599e887c5384a10479ccad068c735709, type: 2}

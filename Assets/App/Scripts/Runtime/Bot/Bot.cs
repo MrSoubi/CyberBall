@@ -5,12 +5,9 @@ public class Bot : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] SSO_CooldownBeforeThrowBall _coolDownBeforeThrow;
-    [SerializeField] int _botId;
     [SerializeField] RSO_PlayerNameList _playerNameList;
     [SerializeField] RSO_PlayerPositionList _playerPositionList;
-
-  
-    [SerializeField] private Vector3 offset;
+    [SerializeField] RSO_PlayerOffsetList _playerOffsetList;
 
     [Header("Output")]
     [SerializeField] private RSO_PlayerSelectedName playerSelectedNameRSO;
@@ -32,16 +29,22 @@ public class Bot : MonoBehaviour
 
     public bool HadBall { get; set; } = false;
 
+    public bool throwBall;
+
     private void Start()
     {
         StartDelayBefore();
     }
+
     public void StartDelayBefore()
     {
-        if (RSO_BallCurrentEntity.Value == gameObject.name)
+        if (RSO_BallCurrentEntity.Value == gameObject.name && !throwBall)
         {
-            StartCoroutine(CooldownBeforeThrow());
+            Debug.Log("t");
 
+            throwBall = true;
+
+            StartCoroutine(CooldownBeforeThrow());
         }
     }
     IEnumerator CooldownBeforeThrow()
@@ -53,19 +56,24 @@ public class Bot : MonoBehaviour
     public void GetRandomTarget()
     {
         int index = Random.Range(0, _playerNameList.Value.Count);
+
         var random = _playerNameList.Value[index];
 
-        if (random == null || gameObject.name == random)
+        while(random == null || gameObject.name == random)
         {
-            GetRandomTarget();
+            index = Random.Range(0, _playerNameList.Value.Count);
+
+            random = _playerNameList.Value[index];
         }
 
         var targetposition = _playerPositionList.Value[index];
 
         playerSelectedNameRSO.Value = random;
-        playerSelectedPositionRSO.Value = targetposition - offset;
+        playerSelectedPositionRSO.Value = targetposition - _playerOffsetList.Value[index];
 
         playerSelectedRSE.Call();
+
+        throwBall = false;
     }
 
     private void OnEnable()
