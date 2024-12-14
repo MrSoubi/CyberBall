@@ -82,6 +82,14 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
+        foreach (var comment in commentsBot2)
+        {
+            if (comment.throw_id == RSO_BallThrowCount.Value)
+            {
+                OnBot2MessageSend.Call(comment.text);
+            }
+        }
+
        
     }
 }
