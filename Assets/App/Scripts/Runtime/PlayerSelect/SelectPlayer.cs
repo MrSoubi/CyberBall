@@ -6,15 +6,6 @@ public class SelectPlayer : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private string nameEntity;
 
-    //[Header("References")]
-
-    //[Space(10)]
-    // RSO
-    // RSF
-    // RSP
-
-    //[Header("Input")]
-
     [Header("Output")]
     [SerializeField] private RSO_PlayerSelectedName playerSelectedNameRSO;
     [SerializeField] private RSO_PlayerSelectedPosition playerSelectedPositionRSO;
@@ -26,6 +17,9 @@ public class SelectPlayer : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Set the Target Selected
+    /// </summary>
     [Button]
     private void SetTarget()
     {
