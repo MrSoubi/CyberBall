@@ -4,9 +4,10 @@ using UnityEngine;
 public class WindowManager : MonoBehaviour
 {
     [Header("Settings")]
-    public List<WindowItem> windows = new List<WindowItem>();
-    //[Header("References")]
+    List<WindowItem> windows = new List<WindowItem>();
 
+    [Header("References")]
+    [SerializeField] private RSE_OpenPanel rseOpenPanel;
     //[Space(10)]
     // RSO
     // RSF
@@ -28,6 +29,9 @@ public class WindowManager : MonoBehaviour
         public GameObject windowObject;
         //public WindowAnimator windowAnimator;
     }
+
+    private void OnEnable() => rseOpenPanel.action += OpenPanel;
+    private void OnDisable() => rseOpenPanel.action -= OpenPanel;
 
     void Awake()
     {

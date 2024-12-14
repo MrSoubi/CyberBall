@@ -22,7 +22,6 @@ public class ProfileManager : MonoBehaviour
     public void OpenFile()
     {
         string result = WriteResult(StandaloneFileBrowser.OpenFilePanel("Open File", "", "", false));
-
         if(result != null)
         {
             rseFilePath.Call(result);
@@ -39,16 +38,13 @@ public class ProfileManager : MonoBehaviour
             return null;
         }
 
-        foreach (var p in paths)
+        foreach(var p in paths)
         {
-            _path += p + "\n";
+            path += p + "\n";
         }
 
-        return path;
-    }
+        path = path.Remove(path.Length - 1);
 
-    public string WriteResult(string path)
-    {
         return path;
     }
 }
