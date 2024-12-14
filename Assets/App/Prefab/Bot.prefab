@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2981805231829071378}
   - component: {fileID: 8327156004523897275}
   - component: {fileID: 8335286125010348240}
+  - component: {fileID: 6477741381754877822}
   m_Layer: 0
   m_Name: Bot
   m_TagString: Untagged
@@ -164,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20df4cc2f5c0bba44aaf0d3d11285d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  haveBall: 1
+  haveBall: 0
   isPlayer: 0
   offset: {x: 0, y: 1, z: 0}
   playerNameRSO: {fileID: 11400000, guid: 5433b32230b07654484c29a90e7237e3, type: 2}
@@ -172,3 +173,25 @@ MonoBehaviour:
   playerPositionListRSO: {fileID: 11400000, guid: 3f40ad88e7e757f4c89e3bb63bc044b8, type: 2}
   ballCurrentEntityRSO: {fileID: 11400000, guid: 3da4f17468bdf1746ac22f21b9d64373, type: 2}
   ballStartPositionRSO: {fileID: 11400000, guid: 599e887c5384a10479ccad068c735709, type: 2}
+--- !u!114 &6477741381754877822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4410566935525130608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2d696d88261ac42895d7e12a8b6526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coolDownBeforeThrow: {fileID: 11400000, guid: 31b1b1a86af25e84b93c24c3f54e77d5, type: 2}
+  _botId: 0
+  _playerNameList: {fileID: 11400000, guid: 68d22d361843044439e83dc8b040e249, type: 2}
+  _playerPositionList: {fileID: 11400000, guid: 3f40ad88e7e757f4c89e3bb63bc044b8, type: 2}
+  offset: {x: 0, y: 1, z: 0}
+  playerSelectedNameRSO: {fileID: 11400000, guid: 1f9a17ccab62c4f44b98c4ea6ba85a31, type: 2}
+  playerSelectedPositionRSO: {fileID: 11400000, guid: 308a7a3647dfdfc408932cbcffdc9184, type: 2}
+  playerSelectedRSE: {fileID: 11400000, guid: 60629f21c2833aa4ca88bbe4d080e0b8, type: 2}
+  RSO_BallCurrentEntity: {fileID: 11400000, guid: 3da4f17468bdf1746ac22f21b9d64373, type: 2}
+  ballCatchRSE: {fileID: 11400000, guid: 39cf95260db20b242abd616d65d49cf5, type: 2}
