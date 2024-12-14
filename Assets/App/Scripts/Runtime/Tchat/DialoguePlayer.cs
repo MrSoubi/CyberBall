@@ -10,6 +10,8 @@ public class DialoguePlayer : MonoBehaviour
     [Header("References")]
     [SerializeField] private Vector2 padding;
     [SerializeField] private RSO_ListMessageOut ListMessageOut;
+    [SerializeField] RSO_GameParameter RSO_GameParameter;
+
     //[Space(10)]
     // RSO
     // RSF
@@ -44,7 +46,7 @@ public class DialoguePlayer : MonoBehaviour
 
         gameObject.SetActive(true);
 
-        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(2f));
+        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(RSO_GameParameter.Value.default_chat_duration));
     }
 
     IEnumerator HideBubbleAfterDelay(float delay)

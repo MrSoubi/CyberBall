@@ -12,6 +12,8 @@ public class DialogueBot : MonoBehaviour
     //[Header("References")]
     [SerializeField] private RectTransform dialogueBubble;
     [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] RSO_GameParameter RSO_GameParameter;
+
     [Space(10)]
     //RSO
     [SerializeField] private RSO_ListMessageOut ListMessageOut;
@@ -47,7 +49,7 @@ public class DialogueBot : MonoBehaviour
 
         gameObject.SetActive(true);
 
-        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(2f));
+        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(RSO_GameParameter.Value.default_chat_duration));
     }
 
     IEnumerator HideBubbleAfterDelay(float delay)
