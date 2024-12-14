@@ -10,7 +10,7 @@ namespace BT.ScriptablesObject
         public T Value
         {
             get => _value;
-            [Button]
+            [PropertySpace(10)][Button]
             set
             {
                 _value = value;
