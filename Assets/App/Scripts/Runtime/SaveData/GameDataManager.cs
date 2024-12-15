@@ -14,6 +14,12 @@ public class GameDataManager : MonoBehaviour
     [SerializeField] RSE_ExportDataToCsv rseExportData;
     [SerializeField] RSE_AddGameAction rseAddGameAction;
 
+    [Space(5)]
+    [SerializeField] RSE_SetupPlayerID rseSetupPlayerID;
+    [SerializeField] RSE_SetupPlayerGender RSE_SetupPlayerGender;
+    string playerId;
+    PlayerGender playerGender;
+
     private void OnEnable()
     {
         rseExportData.action += ExportToCsv;
@@ -27,6 +33,8 @@ public class GameDataManager : MonoBehaviour
 
     void AddGameAction(GameAction action)
     {
+        action.playerID = playerId;
+        action.gender = playerGender;
         actions.Add(action);
     }
 
@@ -113,7 +121,7 @@ public class GameDataManager : MonoBehaviour
         {
             // Get current value & convert to string
             object value = fields[i].GetValue(target);
-            string stringValue = value != null ? value.ToString() : "null";
+            string stringValue = value != null ? value.ToString() : "";
 
             // Afficher ou utiliser la valeur convertie
             result = result + (i == 0 ? stringValue : ";" + stringValue);

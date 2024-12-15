@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: d84fd93d05017cf478b1e8671323b8b7
+guid: 6c23e1a360a49064186c74c7cd3669fc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4610551902833410619
-    second: homme sex face 1_0
+      213: -7240204165821251766
+    second: "arch\xE9type_face_2_0"
+  - first:
+      213: 1086978255368793658
+    second: "arch\xE9type_face_2_1"
+  - first:
+      213: 2048414029845765587
+    second: "arch\xE9type_face_2_2"
+  - first:
+      213: 6749710035085607298
+    second: "arch\xE9type_face_2_3"
+  - first:
+      213: 890449702597862315
+    second: "arch\xE9type_face_2_4"
+  - first:
+      213: 5083474258913997453
+    second: "arch\xE9type_face_2_5"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: homme sex face 1_0
+      name: "arch\xE9type_face_2_0"
       rect:
         serializedVersion: 2
-        x: 39
-        y: 9
-        width: 249
-        height: 575
+        x: 509
+        y: 1842
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +169,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3203e22788fbff30800000000000000
-      internalID: 4610551902833410619
+      spriteID: a4fbbe2eba0a58b90800000000000000
+      internalID: -7240204165821251766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "arch\xE9type_face_2_1"
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1673
+        width: 161
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ea4d5d6f8b51f00800000000000000
+      internalID: 1086978255368793658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "arch\xE9type_face_2_2"
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 51
+        width: 687
+        height: 1786
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd12e905bd6d6c10800000000000000
+      internalID: 2048414029845765587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "arch\xE9type_face_2_3"
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 1357
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 281ca22f389cbad50800000000000000
+      internalID: 6749710035085607298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "arch\xE9type_face_2_4"
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1103
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba3a2b569438b5c00800000000000000
+      internalID: 890449702597862315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "arch\xE9type_face_2_5"
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 117
+        width: 25
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d823963b7e02c8640800000000000000
+      internalID: 5083474258913997453
       vertices: []
       indices: 
       edges: []
@@ -173,8 +298,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      homme sex face 1_0: 4610551902833410619
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

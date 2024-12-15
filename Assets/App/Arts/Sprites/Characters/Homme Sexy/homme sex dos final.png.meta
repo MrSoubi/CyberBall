@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b58fb4f711476d74b8ff8295f775f95c
+guid: ee2b5bf0680282b49ae162a545435441
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8012457712020941467
-    second: Hommesex_dos_02_0
+      213: -1706768755330534893
+    second: homme sex dos final_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hommesex_dos_02_0
+      name: homme sex dos final_0
       rect:
         serializedVersion: 2
-        x: 98
-        y: 94
-        width: 880
-        height: 1739
+        x: 142
+        y: 38
+        width: 785
+        height: 1835
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5651729a9280ec090800000000000000
-      internalID: -8012457712020941467
+      spriteID: 312b9c02cd65058e0800000000000000
+      internalID: -1706768755330534893
       vertices: []
       indices: 
       edges: []

@@ -16,7 +16,7 @@ public class WindowManager : MonoBehaviour
     //[Header("Input")]
     //[Header("Output")]
 
-    private int currentWindowIndex = 0;
+    public int currentWindowIndex = 0;
     private int newWindowIndex;
 
     private WindowItem currentWindow;
