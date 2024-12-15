@@ -47,3 +47,5 @@ MonoBehaviour:
   actions: []
   rseExportData: {fileID: 11400000, guid: 585584a9ff98ff84b8f77e2126dbb316, type: 2}
   rseAddGameAction: {fileID: 11400000, guid: 4bed567abc4913d4ba08c395f9cd02c7, type: 2}
+  rseSetupPlayerID: {fileID: 11400000, guid: 7afdb99a11e6bad43ac81517d616c5d5, type: 2}
+  RSE_SetupPlayerGender: {fileID: 11400000, guid: 1ae7d875c4c54b543949f08d59acfd02, type: 2}
