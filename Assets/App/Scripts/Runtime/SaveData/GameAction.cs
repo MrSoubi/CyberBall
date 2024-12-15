@@ -4,6 +4,10 @@ using UnityEngine;
 [System.Serializable]
 public class GameAction
 {
+    public string playerID;
+    public PlayerGender gender;
+
+    [Space(10)]
     public string actionTime;
     public string elem1, elem2, elem3, elem4;
 
@@ -11,14 +15,14 @@ public class GameAction
     {
         this.elem1 = e1;
 
-        actionTime = DateTime.Now.ToString();
+        SetTime();
     }
     public GameAction(string e1, string e2)
     {
         this.elem1 = e1;
         this.elem2 = e2;
 
-        actionTime = DateTime.Now.ToString();
+        SetTime();
     }
     public GameAction(string e1, string e2, string e3)
     {
@@ -26,7 +30,7 @@ public class GameAction
         this.elem2 = e2;
         this.elem3 = e3;
 
-        actionTime = DateTime.Now.ToString();
+        SetTime();
     }
     public GameAction(string e1, string e2, string e3, string e4)
     {
@@ -35,6 +39,20 @@ public class GameAction
         this.elem3 = e3;
         this.elem4 = e4;
 
-        actionTime = DateTime.Now.ToString();
+        SetTime();
     }
+
+    void SetTime()
+    {
+        actionTime = DateTime.Now.ToString("G");
+    }
+}
+
+public enum PlayerGender
+{ 
+    Homme,
+    Femme,
+    Non_Binaire,
+    Autre,
+    Ne_Se_Prononce_Pas
 }

@@ -44,8 +44,6 @@ public class Bot : MonoBehaviour
     private void Start()
     {
         StartDelayBefore();
-
-        
     }
 
     public void StartDelayBefore()
@@ -67,14 +65,13 @@ public class Bot : MonoBehaviour
     {
         dictBallReceiveCountRSO.Value[gameObject.name]++;
 
-        if (RSO_GameParameter.Value.difficulty == difficulty_mode.NORMAL)
+        if (RSO_GameParameter.Value.inclusivity == inclusivity_mode.INCLUSIF)
         {
-            var differentKeys = dictBallReceiveCountRSO.Value.Keys.Where(key => key != gameObject.name /*|| key != playerNameRSO.Value*/);
+            var differentKeys = dictBallReceiveCountRSO.Value.Keys.Where(key => key != gameObject.name);
             var smallestKey = differentKeys.OrderBy(key => dictBallReceiveCountRSO.Value[key]).FirstOrDefault();
             int indexToHit = _playerNameList.Value.IndexOf(smallestKey);
 
             var targetpositionNormal = _playerPositionList.Value[indexToHit];
-            Debug.Log($"Count Smallest Value: {dictBallReceiveCountRSO.Value[smallestKey]}");
             playerSelectedNameRSO.Value = smallestKey;
             playerSelectedPositionRSO.Value = targetpositionNormal - _playerOffsetList.Value[indexToHit];
 
@@ -84,11 +81,11 @@ public class Bot : MonoBehaviour
 
             return;
         }
-        else if(RSO_GameParameter.Value.difficulty == difficulty_mode.HARD)
+        else if(RSO_GameParameter.Value.inclusivity == inclusivity_mode.EXCLUSIF)
         {
             if (dictBallReceiveCountRSO.Value[playerNameRSO.Value] >= 2)
             {
-                var differentKeys = dictBallReceiveCountRSO.Value.Keys.Where(key => key != gameObject.name || key != playerNameRSO.Value);
+                var differentKeys = dictBallReceiveCountRSO.Value.Keys.Where(key => key != gameObject.name && key != playerNameRSO.Value);
                 var smallestKey = differentKeys.OrderBy(key => dictBallReceiveCountRSO.Value[key]).FirstOrDefault();
                 int indexToHit = _playerNameList.Value.IndexOf(smallestKey);
 
@@ -125,6 +122,7 @@ public class Bot : MonoBehaviour
                 playerSelectedRSE.Call();
 
                 throwBall = false;
+                return;
             }
         }
 

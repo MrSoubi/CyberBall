@@ -45,3 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rseLaunchSession: {fileID: 11400000, guid: 8312ed02f7e841a46b2343252c1d2cf7, type: 2}
+  rseBallCounterMax: {fileID: 11400000, guid: 9042886e862e251428fef6891bac8ca7, type: 2}
+  rseOpenPanel: {fileID: 11400000, guid: 03b100546c8695546a3e3cedce079b5c, type: 2}
