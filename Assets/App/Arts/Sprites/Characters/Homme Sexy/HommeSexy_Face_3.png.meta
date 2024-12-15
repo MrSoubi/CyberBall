@@ -58,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -264,7 +264,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -273,7 +273,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HommeSexy_Face_3_0: -944505540397500158
+      HommeSexy_Face_3_1: 7871395302126918478
+      HommeSexy_Face_3_2: -2938128193375888145
+      HommeSexy_Face_3_3: 6220403667062095289
+      HommeSexy_Face_3_4: -8190935616774288388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
