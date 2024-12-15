@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: b58fb4f711476d74b8ff8295f775f95c
+guid: 0fb70a96e9e541f469e780541ad984a9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8012457712020941467
-    second: Hommesex_dos_02_0
+      213: -944505540397500158
+    second: HommeSexy_Face_3_0
+  - first:
+      213: 7871395302126918478
+    second: HommeSexy_Face_3_1
+  - first:
+      213: -2938128193375888145
+    second: HommeSexy_Face_3_2
+  - first:
+      213: 6220403667062095289
+    second: HommeSexy_Face_3_3
+  - first:
+      213: -8190935616774288388
+    second: HommeSexy_Face_3_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hommesex_dos_02_0
+      name: HommeSexy_Face_3_0
       rect:
         serializedVersion: 2
-        x: 98
-        y: 94
-        width: 880
-        height: 1739
+        x: 152
+        y: 57
+        width: 682
+        height: 1838
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +166,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5651729a9280ec090800000000000000
-      internalID: -8012457712020941467
+      spriteID: 209f738173174e2f0800000000000000
+      internalID: -944505540397500158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HommeSexy_Face_3_1
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1627
+        width: 19
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b14f5a250dc3d60800000000000000
+      internalID: 7871395302126918478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HommeSexy_Face_3_2
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 1646
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec154999fba937d0800000000000000
+      internalID: -2938128193375888145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HommeSexy_Face_3_3
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1597
+        width: 25
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bdf5c69d20535650800000000000000
+      internalID: 6220403667062095289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HommeSexy_Face_3_4
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1072
+        width: 39
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfbc2183473f35e80800000000000000
+      internalID: -8190935616774288388
       vertices: []
       indices: 
       edges: []
