@@ -298,7 +298,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "arch\xE9type_face_2_0": -7240204165821251766
+      "arch\xE9type_face_2_1": 1086978255368793658
+      "arch\xE9type_face_2_2": 2048414029845765587
+      "arch\xE9type_face_2_3": 6749710035085607298
+      "arch\xE9type_face_2_4": 890449702597862315
+      "arch\xE9type_face_2_5": 5083474258913997453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

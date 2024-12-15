@@ -323,7 +323,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      madame_random4_dos_0: 5947767993854727831
+      madame_random4_dos_1: -782662825579165815
+      madame_random4_dos_2: 4990283642814076772
+      madame_random4_dos_3: 3303991234444753306
+      madame_random4_dos_4: 136893529155027087
+      madame_random4_dos_5: -8281970607643764009
+      madame_random4_dos_6: -3169777372817884166
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

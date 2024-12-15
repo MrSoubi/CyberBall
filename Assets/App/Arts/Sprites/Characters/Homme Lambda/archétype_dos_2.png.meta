@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "arch\xE9type_dos_2_0": -4359559497567898989
+      "arch\xE9type_dos_2_1": -8422911909401132237
+      "arch\xE9type_dos_2_2": 4956089921276291887
+      "arch\xE9type_dos_2_3": 4151532850188318969
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

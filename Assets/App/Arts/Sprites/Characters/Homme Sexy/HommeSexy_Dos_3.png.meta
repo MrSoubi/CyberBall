@@ -298,7 +298,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HommeSexy_Dos_3_0: 8021427468614032297
+      HommeSexy_Dos_3_1: -3557515084830857958
+      HommeSexy_Dos_3_2: -5486381965832952458
+      HommeSexy_Dos_3_3: -253249018203575487
+      HommeSexy_Dos_3_4: 78829019747275429
+      HommeSexy_Dos_3_5: -8683107303383133868
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

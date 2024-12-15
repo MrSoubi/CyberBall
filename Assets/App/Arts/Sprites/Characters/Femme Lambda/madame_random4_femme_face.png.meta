@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      madame_random4_femme_face_0: 9126530248668969470
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

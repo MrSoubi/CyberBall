@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hommesex_face_02_0: -6566446639636657106
+      Hommesex_face_02_1: -1602457026964509615
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
