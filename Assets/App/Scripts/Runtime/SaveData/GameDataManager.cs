@@ -16,19 +16,38 @@ public class GameDataManager : MonoBehaviour
 
     [Space(5)]
     [SerializeField] RSE_SetupPlayerID rseSetupPlayerID;
-    [SerializeField] RSE_SetupPlayerGender RSE_SetupPlayerGender;
-    string playerId;
-    PlayerGender playerGender;
+    [SerializeField] RSE_SetupPlayerGender rseSetupPlayerGender;
+
+    private string playerId = "";
+    private PlayerGender playerGender = PlayerGender.Homme;
 
     private void OnEnable()
     {
         rseExportData.action += ExportToCsv;
         rseAddGameAction.action += AddGameAction;
+
+        rseSetupPlayerID.action += SetupPlayerID;
+        rseSetupPlayerGender.action += SetupPlayerGender;
     }
     private void OnDisable()
     {
         rseExportData.action -= ExportToCsv;
         rseAddGameAction.action -= AddGameAction;
+
+        rseSetupPlayerID.action -= SetupPlayerID;
+        rseSetupPlayerGender.action -= SetupPlayerGender;
+    }
+
+    private void SetupPlayerID(string id)
+    {
+        playerId = id;
+        Debug.Log(playerId);
+    }
+
+    private void SetupPlayerGender(int gender)
+    {
+        playerGender =  (PlayerGender)gender;
+        Debug.Log(playerGender);
     }
 
     void AddGameAction(GameAction action)
