@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 66d81942dec168248bf63a119cfdf63e
+guid: c473a1bfd49c35c4c81ba9ed6ff3ca11
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5084946000869153687
-    second: "arch\xE9type_dos_3_0"
+      213: -1162943291638038896
+    second: bimbo final 3-4 back_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "arch\xE9type_dos_3_0"
+      name: bimbo final 3-4 back_0
       rect:
         serializedVersion: 2
-        x: 191
-        y: 0
-        width: 698
-        height: 1920
+        x: 220
+        y: 49
+        width: 743
+        height: 1774
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 964a62cad84ae69b0800000000000000
-      internalID: -5084946000869153687
+      spriteID: 09ebdffdc356cdfe0800000000000000
+      internalID: -1162943291638038896
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "arch\xE9type_dos_3_0": -5084946000869153687
+      bimbo final 3-4 back_0: -1162943291638038896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
