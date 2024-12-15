@@ -14,7 +14,11 @@ public class QTESystem : MonoBehaviour
     private KeyCode validKeyCode;
     private bool QTERunning = false;
 
-    //[Header("References")]
+    [Header("References")]
+    [SerializeField] private GameObject imageQTE;
+    [SerializeField] private Slider sliderQTE;
+    [SerializeField] private TextMeshProUGUI textQTE;
+
     [Header("RSO")]
     [SerializeField] private RSO_GameParameter gameParameter;
     [SerializeField] private RSO_ScoreMaxQTE scoreMaxQTE;
@@ -56,6 +60,7 @@ public class QTESystem : MonoBehaviour
             {
                 currentScore++;
                 currentScoreQTE.Value = currentScore;
+                sliderQTE.value = currentScore;
                 ChooseNextInput();
             }
             else
@@ -64,6 +69,7 @@ public class QTESystem : MonoBehaviour
                 {
                     currentScore--;
                     currentScoreQTE.Value = currentScore;
+                    sliderQTE.value = currentScore;
                     ChooseNextInput();
                 }
                 
@@ -74,6 +80,7 @@ public class QTESystem : MonoBehaviour
         {
             eventQTESucced.Call();
             QTERunning = false;
+            imageQTE.SetActive(false);
             StopAllCoroutines();
             scoreMax = 10;
             scoreMaxQTE.Value = scoreMax;
@@ -88,6 +95,7 @@ public class QTESystem : MonoBehaviour
         int keyCode = Random.Range(0, input.Count);
         validKeyCode = input[keyCode];
         validKeyCodeQTE.Value = validKeyCode;
+        textQTE.text = validKeyCode.ToString();
 
     }
 
@@ -98,7 +106,11 @@ public class QTESystem : MonoBehaviour
             if (QTERunning) StopAllCoroutines();
             currentScore = 0;
             currentScoreQTE.Value = currentScore;
+            sliderQTE.value = currentScore;
+            sliderQTE.minValue = 0;
+            sliderQTE.maxValue = scoreMax;
             QTERunning = true;
+            imageQTE.SetActive(true);
             StartCoroutine(StartQTECountdown(countdownQTE));
             ChooseNextInput();
         }
@@ -114,5 +126,6 @@ public class QTESystem : MonoBehaviour
         yield return new WaitForSecondsRealtime(delay);
         eventQTEFailed.Call();
         QTERunning = false;
+        imageQTE.SetActive(false);
     }
 }
