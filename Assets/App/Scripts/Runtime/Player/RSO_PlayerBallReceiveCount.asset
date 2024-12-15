@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c24636c018269844a823397de7e63e55, type: 3}
+  m_Script: {fileID: 11500000, guid: 614f006ab6974c24d91cd9e89e5c58e8, type: 3}
   m_Name: RSO_PlayerBallReceiveCount
   m_EditorClassIdentifier: 
