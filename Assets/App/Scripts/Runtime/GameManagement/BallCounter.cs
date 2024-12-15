@@ -30,7 +30,7 @@ public class BallCounter : MonoBehaviour
 
     private void SetupComponent()
     {
-        _ballCounter = rsoGameParametter.Value.nb_throws;
+        maxBallTrough = rsoGameParametter.Value.nb_throws;
     }
 
     /// <summary>
