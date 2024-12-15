@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cjdec24_contour_sol_sous_perso_0: -1464135949160310520
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

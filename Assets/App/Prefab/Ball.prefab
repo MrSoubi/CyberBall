@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &742200317928814106
 Transform:
   m_ObjectHideFlags: 0
@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -109,10 +109,10 @@ MonoBehaviour:
   _playerNameList: {fileID: 11400000, guid: 68d22d361843044439e83dc8b040e249, type: 2}
   _playerPositionList: {fileID: 11400000, guid: 3f40ad88e7e757f4c89e3bb63bc044b8, type: 2}
   _playerOffsetList: {fileID: 11400000, guid: 1e617524ff3cbf8489dbab3f012ae786, type: 2}
+  rseBallCounterMax: {fileID: 11400000, guid: 9042886e862e251428fef6891bac8ca7, type: 2}
   playerSelectedRSE: {fileID: 11400000, guid: 60629f21c2833aa4ca88bbe4d080e0b8, type: 2}
   ballCatchRSE: {fileID: 11400000, guid: 39cf95260db20b242abd616d65d49cf5, type: 2}
   onBallThrowRSE: {fileID: 11400000, guid: a6ac3f863252625429fcf5c70bd25780, type: 2}
-  ballThrowCountRSO: {fileID: 11400000, guid: 57fcbb9f3ebcc664fa832c03c2aa315d, type: 2}
   ballCurrentEntityRSO: {fileID: 11400000, guid: 3da4f17468bdf1746ac22f21b9d64373, type: 2}
   qTESuccedRSE: {fileID: 11400000, guid: 095ee3808ad77624d82ccdeca444b9e3, type: 2}
   qTEFailedRSE: {fileID: 11400000, guid: 39f1a15bf01a96144aecc4a2a39e28fc, type: 2}
