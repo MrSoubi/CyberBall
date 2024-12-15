@@ -43,7 +43,6 @@ public class BallCounter : MonoBehaviour
         _ballCounter++;
         RSO_BallThrowCount.Value++;
         send.Call();
-        Debug.Log("t");
         if (_ballCounter >= maxBallTrough) rseBallCounterMax.Call();
     }
 
