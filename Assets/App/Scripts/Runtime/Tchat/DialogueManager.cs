@@ -3,10 +3,10 @@ using UnityEngine;
 public class DialogueManager : MonoBehaviour
 {
     //[Header("Settings")]
-    [SerializeField] int idBot1;
-    [SerializeField] int idBot2;
+
     //[Header("References")]
     [SerializeField] RSO_GameParameter RSO_GameParameter;
+    [SerializeField] RSO_ListMessageIn RSO_ListMessageIn;
     [SerializeField] GameObject GameTchat;
     [SerializeField] private RSE_OnBotMessageSend OnBot1MessageSend;
     [SerializeField] private RSE_OnBotMessageSend OnBot2MessageSend;
@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        if (RSO_GameParameter.Value.is_chat_enabled == true)
+        if (RSO_GameParameter.Value.is_chat_enabled == false)
         {
             GameTchat.SetActive(true);
 
@@ -59,11 +59,11 @@ public class DialogueManager : MonoBehaviour
 
         foreach (var comment in RSO_GameParameter.Value.comments)
         {
-            if(comment.bot_id == idBot1)
+            if(comment.bot_id == 0)
             {
                 commentsBot1.Add(comment);
             }
-            else if (comment.bot_id == idBot2)
+            else if (comment.bot_id == 1)
             {
                 commentsBot2.Add(comment);
             }

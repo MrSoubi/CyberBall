@@ -103,9 +103,4 @@ public class Ball : MonoBehaviour
         GameAction currentAction = new GameAction(ballCurrentEntityRSO.Value, "Catch");
         addGameActionRSE.Call(currentAction);
     }
-
-    private void OnDestroy()
-    {
-        ballThrowCountRSO.Value = 0;
-    }
 }
