@@ -15,6 +15,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private RSO_PlayerNameList _playerNameList;
     [SerializeField] private RSO_PlayerPositionList _playerPositionList;
     [SerializeField] private RSO_PlayerOffsetList _playerOffsetList;
+    [SerializeField] private RSE_BallCounterMax rseBallCounterMax;
 
     [Header("Input")]
     [SerializeField] private RSE_PlayerSelected playerSelectedRSE;
@@ -91,8 +92,6 @@ public class Ball : MonoBehaviour
         GameAction currentAction = new GameAction(ballCurrentEntityRSO.Value, "Throw", playerSelectedNameRSO.Value);
         addGameActionRSE.Call(currentAction);
 
-        onBallThrowRSE.Call();
-
         ballCurrentEntityRSO.Value = null;
 
         posStart = transform.position;
@@ -115,6 +114,8 @@ public class Ball : MonoBehaviour
         ballCurrentEntityRSO.Value = playerSelectedNameRSO.Value;
 
         ballCatchRSE.Call();
+
+        onBallThrowRSE.Call();
 
         GameAction currentAction = new GameAction(ballCurrentEntityRSO.Value, "Catch");
         addGameActionRSE.Call(currentAction);
