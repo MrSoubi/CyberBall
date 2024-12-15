@@ -907,6 +907,7 @@ MonoBehaviour:
     windowObject: {fileID: 534378849912468530}
   - windowName: Welcome
     windowObject: {fileID: 5797343537895372848}
+  rseOpenPanel: {fileID: 11400000, guid: 03b100546c8695546a3e3cedce079b5c, type: 2}
 --- !u!1 &5797343537895372848
 GameObject:
   m_ObjectHideFlags: 0

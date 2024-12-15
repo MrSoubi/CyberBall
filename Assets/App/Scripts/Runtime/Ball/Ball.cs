@@ -7,10 +7,14 @@ public class Ball : MonoBehaviour
     [SerializeField] private float speed;
 
     [Header("Output")]
+    [SerializeField] private RSO_PlayerName playerNameRSO;
     [SerializeField] private RSO_PlayerSelectedPosition playerSelectedPositionRSO;
     [SerializeField] private RSO_BallStartPosition ballStartPositionRSO;
     [SerializeField] private RSO_PlayerSelectedName playerSelectedNameRSO;
     [SerializeField] private RSE_AddGameAction addGameActionRSE;
+    [SerializeField] private RSO_PlayerNameList _playerNameList;
+    [SerializeField] private RSO_PlayerPositionList _playerPositionList;
+    [SerializeField] private RSO_PlayerOffsetList _playerOffsetList;
 
     [Header("Input")]
     [SerializeField] private RSE_PlayerSelected playerSelectedRSE;
@@ -57,11 +61,25 @@ public class Ball : MonoBehaviour
         ballCurrentEntityRSO.Value = null;
 
         posStart = transform.position;
-        posTarget = playerSelectedPositionRSO.Value;
+
+        int index = Random.Range(0, _playerNameList.Value.Count);
+
+        var random = _playerNameList.Value[index];
+
+        while (random == null && playerNameRSO.Value == random)
+        {
+            index = Random.Range(0, _playerNameList.Value.Count);
+
+            random = _playerNameList.Value[index];
+        }
+
+        var targetposition = _playerPositionList.Value[index];
+
+        posTarget = targetposition - _playerOffsetList.Value[index];
 
         transform.position = posTarget;
 
-        ballCurrentEntityRSO.Value = playerSelectedNameRSO.Value;
+        ballCurrentEntityRSO.Value = random;
 
         ballCatchRSE.Call();
     }
@@ -102,5 +120,10 @@ public class Ball : MonoBehaviour
 
         GameAction currentAction = new GameAction(ballCurrentEntityRSO.Value, "Catch");
         addGameActionRSE.Call(currentAction);
+    }
+
+    private void OnDestroy()
+    {
+        ballThrowCountRSO.Value = 0;
     }
 }
