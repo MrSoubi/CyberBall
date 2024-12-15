@@ -74,7 +74,6 @@ public class Bot : MonoBehaviour
             int indexToHit = _playerNameList.Value.IndexOf(smallestKey);
 
             var targetpositionNormal = _playerPositionList.Value[indexToHit];
-            Debug.Log($"Count Smallest Value: {dictBallReceiveCountRSO.Value[smallestKey]}");
             playerSelectedNameRSO.Value = smallestKey;
             playerSelectedPositionRSO.Value = targetpositionNormal - _playerOffsetList.Value[indexToHit];
 

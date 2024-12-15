@@ -66,7 +66,7 @@ public class Ball : MonoBehaviour
 
         var random = _playerNameList.Value[index];
 
-        while (random == null && playerNameRSO.Value == random)
+        while (playerNameRSO.Value == random)
         {
             index = Random.Range(0, _playerNameList.Value.Count);
 
