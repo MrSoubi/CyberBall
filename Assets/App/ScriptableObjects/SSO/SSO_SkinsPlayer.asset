@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63bdb9db7ccaf2c458761af8d89d0b95, type: 3}
+  m_Name: SSO_SkinsPlayer
+  m_EditorClassIdentifier: 
+  skinsData:
+  - enumAvatar: 0
+    sprite: {fileID: 21300000, guid: 2e9868a746923fc47ac41ff097e7d011, type: 3}
+  - enumAvatar: 1
+    sprite: {fileID: 21300000, guid: 66d81942dec168248bf63a119cfdf63e, type: 3}
+  - enumAvatar: 2
+    sprite: {fileID: 21300000, guid: 82edc72de0177d14a81d4269836c875a, type: 3}
+  - enumAvatar: 4
+    sprite: {fileID: 21300000, guid: 1017d9f2d6036244d94db3280da5ef24, type: 3}
+  - enumAvatar: 5
+    sprite: {fileID: 21300000, guid: c3c28a96b64162e4490d6ba138f4cf8e, type: 3}
+  - enumAvatar: 6
+    sprite: {fileID: 21300000, guid: b05c1e54437441343ae387387c036a4c, type: 3}
+  - enumAvatar: 7
+    sprite: {fileID: 21300000, guid: 1964cb6b104454b428636718cf7d1d8e, type: 3}
+  - enumAvatar: 8
+    sprite: {fileID: 21300000, guid: b58fb4f711476d74b8ff8295f775f95c, type: 3}
+  - enumAvatar: 9
+    sprite: {fileID: 21300000, guid: 44183535a90cfb64490dd784b01aa27f, type: 3}
+  - enumAvatar: 10
+    sprite: {fileID: 21300000, guid: ee2b5bf0680282b49ae162a545435441, type: 3}
+  - enumAvatar: 12
+    sprite: {fileID: 21300000, guid: 46e6068f6622c5345921b3a2f726435a, type: 3}
+  - enumAvatar: 13
+    sprite: {fileID: 21300000, guid: c473a1bfd49c35c4c81ba9ed6ff3ca11, type: 3}
