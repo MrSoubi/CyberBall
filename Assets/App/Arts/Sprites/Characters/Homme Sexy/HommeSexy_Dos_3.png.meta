@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: b58fb4f711476d74b8ff8295f775f95c
+guid: 44183535a90cfb64490dd784b01aa27f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8012457712020941467
-    second: Hommesex_dos_02_0
+      213: 8021427468614032297
+    second: HommeSexy_Dos_3_0
+  - first:
+      213: -3557515084830857958
+    second: HommeSexy_Dos_3_1
+  - first:
+      213: -5486381965832952458
+    second: HommeSexy_Dos_3_2
+  - first:
+      213: -253249018203575487
+    second: HommeSexy_Dos_3_3
+  - first:
+      213: 78829019747275429
+    second: HommeSexy_Dos_3_4
+  - first:
+      213: -8683107303383133868
+    second: HommeSexy_Dos_3_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hommesex_dos_02_0
+      name: HommeSexy_Dos_3_0
       rect:
         serializedVersion: 2
-        x: 98
-        y: 94
-        width: 880
-        height: 1739
+        x: 77
+        y: 1615
+        width: 20
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +169,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5651729a9280ec090800000000000000
-      internalID: -8012457712020941467
+      spriteID: 9abdc4a88c5d15f60800000000000000
+      internalID: 8021427468614032297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HommeSexy_Dos_3_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1637
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15209df0ea21aec0800000000000000
+      internalID: -3557515084830857958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HommeSexy_Dos_3_2
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1589
+        width: 20
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675ea609ba47cd3b0800000000000000
+      internalID: -5486381965832952458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HommeSexy_Dos_3_3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 48
+        width: 698
+        height: 1812
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b62461c574c7cf0800000000000000
+      internalID: -253249018203575487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HommeSexy_Dos_3_4
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 47
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a25708639e081100800000000000000
+      internalID: 78829019747275429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HommeSexy_Dos_3_5
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 41
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4519f33a9e76f7780800000000000000
+      internalID: -8683107303383133868
       vertices: []
       indices: 
       edges: []

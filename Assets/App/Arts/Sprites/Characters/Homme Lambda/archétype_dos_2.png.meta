@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 4771ea8bab814ec4695ad71e8edda499
+guid: 2e9868a746923fc47ac41ff097e7d011
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3445180676148145821
-    second: homme sex dos 1_0
+      213: -4359559497567898989
+    second: "arch\xE9type_dos_2_0"
+  - first:
+      213: -8422911909401132237
+    second: "arch\xE9type_dos_2_1"
+  - first:
+      213: 4956089921276291887
+    second: "arch\xE9type_dos_2_2"
+  - first:
+      213: 4151532850188318969
+    second: "arch\xE9type_dos_2_3"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: homme sex dos 1_0
+      name: "arch\xE9type_dos_2_0"
       rect:
         serializedVersion: 2
-        x: 41
-        y: 2
-        width: 247
-        height: 576
+        x: 195
+        y: 51
+        width: 707
+        height: 1813
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +163,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 361562bad624030d0800000000000000
-      internalID: -3445180676148145821
+      spriteID: 392f8422cbbbf73c0800000000000000
+      internalID: -4359559497567898989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "arch\xE9type_dos_2_1"
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 1706
+        width: 178
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3330db1be3ecb1b80800000000000000
+      internalID: -8422911909401132237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "arch\xE9type_dos_2_2"
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1064
+        width: 9
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b2190668197c440800000000000000
+      internalID: 4956089921276291887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "arch\xE9type_dos_2_3"
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 954
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f8f6d8a1253d9930800000000000000
+      internalID: 4151532850188318969
       vertices: []
       indices: 
       edges: []
@@ -173,8 +248,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      homme sex dos 1_0: -3445180676148145821
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

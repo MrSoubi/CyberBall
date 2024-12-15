@@ -47,4 +47,6 @@ MonoBehaviour:
   rsoGameParametter: {fileID: 11400000, guid: 64b1ed078971011468d9d4fc2903ad9c, type: 2}
   rseBallTrough: {fileID: 11400000, guid: a6ac3f863252625429fcf5c70bd25780, type: 2}
   rseSetupBot: {fileID: 11400000, guid: 0f8679f10e5251c40a6a48c1fff85ed6, type: 2}
+  RSO_BallThrowCount: {fileID: 11400000, guid: 57fcbb9f3ebcc664fa832c03c2aa315d, type: 2}
+  send: {fileID: 11400000, guid: 6cec86fe7a7d356499344ccf62744470, type: 2}
   rseBallCounterMax: {fileID: 11400000, guid: 9042886e862e251428fef6891bac8ca7, type: 2}

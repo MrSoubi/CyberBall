@@ -58,7 +58,7 @@ public class DialogueBot : MonoBehaviour
 
         bubbleObject.gameObject.SetActive(true);
 
-        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(RSO_GameParameter.Value.default_chat_duration  /*2f*/));
+        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(RSO_GameParameter.Value.default_chat_message_duration  /*2f*/));
     }
 
     IEnumerator HideBubbleAfterDelay(float delay)

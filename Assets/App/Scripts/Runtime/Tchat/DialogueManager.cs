@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     // RSP
 
     //[Header("Input")]
-    [SerializeField] RSE_OnBallThrow OnBallThrow;
+    [SerializeField] RSE_Send send;
 
     //[Header("Output")]
 
@@ -86,8 +86,6 @@ public class DialogueManager : MonoBehaviour
     }
     void DisplayBotMessage()
     {
- 
-
         foreach (var comment in commentsBot1)
         {
             if (comment.throw_id == RSO_BallThrowCount.Value)
@@ -109,11 +107,11 @@ public class DialogueManager : MonoBehaviour
 
     private void OnEnable()
     {
-        OnBallThrow.action += DisplayBotMessage;
+        send.action += DisplayBotMessage;
     }
 
     private void OnDisable()
     {
-        OnBallThrow.action -= DisplayBotMessage;
+        send.action -= DisplayBotMessage;
     }
 }

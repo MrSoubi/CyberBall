@@ -248,11 +248,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Old_money_Dos_0: -6103171525882668279
-      Old_money_Dos_1: 9126431356033506931
-      Old_money_Dos_2: -3289620148580199081
-      Old_money_Dos_3: -6343321621329399011
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
