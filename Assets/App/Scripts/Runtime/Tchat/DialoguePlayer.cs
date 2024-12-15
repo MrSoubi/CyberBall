@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 public class DialoguePlayer : MonoBehaviour
 {
     [Header("Settings")]
@@ -9,6 +10,7 @@ public class DialoguePlayer : MonoBehaviour
     [Header("References")]
     [SerializeField] RSO_GameParameter RSO_GameParameter;
     [SerializeField] TMP_Text textScrollView;
+    [SerializeField] ScrollRect scrollRect;
 
     //[Space(10)]
     // RSO
@@ -71,10 +73,19 @@ public class DialoguePlayer : MonoBehaviour
             //var tchat = new TchatOut();
             //tchat.MessageContent = userInput;
             //ListMessageOut.Value.Add(tchat);
+            //scrollRect.verticalNormalizedPosition = 0;
+            StartCoroutine(ChangeRect());
+
         }
     }
 
-    
+    IEnumerator ChangeRect()
+    {
+        yield return new WaitForEndOfFrame();
+        scrollRect.verticalNormalizedPosition = 0;
+
+    }
+
 
 
     private void OnEnable()

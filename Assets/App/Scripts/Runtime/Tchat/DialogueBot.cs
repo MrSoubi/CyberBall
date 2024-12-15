@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using System.Collections;
 using System.Globalization;
+using UnityEngine.UI;
 
 public class DialogueBot : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class DialogueBot : MonoBehaviour
     [SerializeField] RSO_GameParameter RSO_GameParameter;
     [SerializeField] GameObject bubbleObject;
     [SerializeField] TMP_Text textScrollView;
+    [SerializeField] ScrollRect scrollRect;
 
 
     [Space(10)]
@@ -85,9 +87,18 @@ public class DialogueBot : MonoBehaviour
 
             GameAction action = new GameAction(botName, "sendMessage", "content:" + text);
             rseAddGameAction.Call(action);
+
+            StartCoroutine(ChangeRect());
+
         }
     }
 
+    IEnumerator ChangeRect()
+    {
+        yield return new WaitForEndOfFrame();
+        scrollRect.verticalNormalizedPosition = 0;
+
+    }
     private void OnEnable()
     {
         OnBotMessageSend.action += OnBotSendText;
