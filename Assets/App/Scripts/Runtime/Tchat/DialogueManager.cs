@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        if (RSO_GameParameter.Value.is_chat_enabled == false)
+        if (RSO_GameParameter.Value.is_chat_enabled == true)
         {
             GameTchat.SetActive(true);
 
