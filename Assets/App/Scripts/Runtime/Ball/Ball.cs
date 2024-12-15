@@ -20,7 +20,6 @@ public class Ball : MonoBehaviour
     [SerializeField] private RSE_PlayerSelected playerSelectedRSE;
     [SerializeField] private RSE_BallCatch ballCatchRSE;
     [SerializeField] private RSE_OnBallThrow onBallThrowRSE;
-    [SerializeField] private RSO_BallThrowCount ballThrowCountRSO;
     [SerializeField] private RSO_BallCurrentEntity ballCurrentEntityRSO;
     [SerializeField] private RSE_QTESucced qTESuccedRSE;
     [SerializeField] private RSE_QTEFailed qTEFailedRSE;
@@ -92,7 +91,6 @@ public class Ball : MonoBehaviour
         GameAction currentAction = new GameAction(ballCurrentEntityRSO.Value, "Throw", playerSelectedNameRSO.Value);
         addGameActionRSE.Call(currentAction);
 
-        ballThrowCountRSO.Value += 1;
         onBallThrowRSE.Call();
 
         ballCurrentEntityRSO.Value = null;
@@ -120,10 +118,5 @@ public class Ball : MonoBehaviour
 
         GameAction currentAction = new GameAction(ballCurrentEntityRSO.Value, "Catch");
         addGameActionRSE.Call(currentAction);
-    }
-
-    private void OnDestroy()
-    {
-        ballThrowCountRSO.Value = 0;
     }
 }

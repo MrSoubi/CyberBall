@@ -4,18 +4,35 @@ using UnityEngine.Serialization;
 
 public class BallCounter : MonoBehaviour
 {
-    [Header("Settings")] 
-    [SerializeField] private int maxBallTrough;
+    private int maxBallTrough;
     private int _ballCounter;
 
+    [Header("Reference")]
+    [SerializeField] private RSO_GameParameter rsoGameParametter;
+
     [Header("Input")]
-    [SerializeField] private RSE_BallTrough rseBallTrough;
+    [SerializeField] private RSE_OnBallThrow rseBallTrough;
+    [SerializeField] private RSE_SetupBot rseSetupBot;
     [Header("Output")]
     [SerializeField] private RSE_BallCounterMax rseBallCounterMax;
 
-    private void OnEnable() => rseBallTrough.action += IncrementBallCounter;
-    private void OnDisable() => rseBallTrough.action -= IncrementBallCounter;
-    
+    private void OnEnable()
+    {
+        rseBallTrough.action += IncrementBallCounter;
+        rseSetupBot.action += SetupComponent;
+    }
+
+    private void OnDisable()
+    {
+        rseBallTrough.action -= IncrementBallCounter;
+        rseSetupBot.action -= SetupComponent;
+    }
+
+    private void SetupComponent()
+    {
+        _ballCounter = rsoGameParametter.Value.nb_throws;
+    }
+
     /// <summary>
     /// When component enable, count ball trough and check if max ball trough
     /// </summary>
