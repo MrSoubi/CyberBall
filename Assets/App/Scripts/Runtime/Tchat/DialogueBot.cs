@@ -2,15 +2,19 @@ using TMPro;
 using UnityEngine;
 using System.Collections;
 using System.Globalization;
+using UnityEngine.UI;
 
 public class DialogueBot : MonoBehaviour
 {
     //[Header("Settings")]
-
+    [SerializeField] string botName;
     //[Header("References")]
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] RSO_GameParameter RSO_GameParameter;
     [SerializeField] GameObject bubbleObject;
+    [SerializeField] TMP_Text textScrollView;
+    [SerializeField] ScrollRect scrollRect;
+
 
     [Space(10)]
     //RSO
@@ -54,7 +58,7 @@ public class DialogueBot : MonoBehaviour
 
         bubbleObject.gameObject.SetActive(true);
 
-        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(2f/*RSO_GameParameter.Value.default_chat_duration*/));
+        displayCoroutine = StartCoroutine(HideBubbleAfterDelay(RSO_GameParameter.Value.default_chat_duration  /*2f*/));
     }
 
     IEnumerator HideBubbleAfterDelay(float delay)
@@ -75,16 +79,26 @@ public class DialogueBot : MonoBehaviour
             DisplayDialogue(text);
             //var tchat = new TchatOut();
 
+            textScrollView.text += $"[{botName}]:\u00A0{text}\n";
 
 
             //tchat.MessageContent = text;
             //ListMessageOut.Value.Add(tchat);
 
-            GameAction action = new GameAction("bot", "sendMessage", "content:" + text);
+            GameAction action = new GameAction(botName, "sendMessage", "content:" + text);
             rseAddGameAction.Call(action);
+
+            StartCoroutine(ChangeRect());
+
         }
     }
 
+    IEnumerator ChangeRect()
+    {
+        yield return new WaitForEndOfFrame();
+        scrollRect.verticalNormalizedPosition = 0;
+
+    }
     private void OnEnable()
     {
         OnBotMessageSend.action += OnBotSendText;
