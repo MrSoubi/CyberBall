@@ -6,7 +6,7 @@ public class GameParameter
     public int nb_throws;
     
     public bool is_chat_enabled;
-    public float default_chat_duration;
+    public float default_chat_message_duration;
 
     public bool is_avatar_selection_enabled;
     public avatar avatar_selection;

@@ -13,6 +13,8 @@ public class BallCounter : MonoBehaviour
     [Header("Input")]
     [SerializeField] private RSE_OnBallThrow rseBallTrough;
     [SerializeField] private RSE_SetupBot rseSetupBot;
+    [SerializeField] RSO_BallThrowCount RSO_BallThrowCount;
+    [SerializeField] RSE_Send send;
     [Header("Output")]
     [SerializeField] private RSE_BallCounterMax rseBallCounterMax;
 
@@ -39,6 +41,14 @@ public class BallCounter : MonoBehaviour
     private void IncrementBallCounter()
     {
         _ballCounter++;
+        RSO_BallThrowCount.Value++;
+        send.Call();
+        Debug.Log("t");
         if (_ballCounter >= maxBallTrough) rseBallCounterMax.Call();
+    }
+
+    private void OnDestroy()
+    {
+        RSO_BallThrowCount.Value = 0;
     }
 }

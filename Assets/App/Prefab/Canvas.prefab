@@ -2343,7 +2343,7 @@ MonoBehaviour:
   OnBot1MessageSend: {fileID: 11400000, guid: 63a4384b92afa3a4f9c9155443a78611, type: 2}
   OnBot2MessageSend: {fileID: 11400000, guid: 2af6ac9a15f0d7241a2aa7b4e994fbf0, type: 2}
   RSO_BallThrowCount: {fileID: 11400000, guid: 57fcbb9f3ebcc664fa832c03c2aa315d, type: 2}
-  OnBallThrow: {fileID: 11400000, guid: a6ac3f863252625429fcf5c70bd25780, type: 2}
+  send: {fileID: 11400000, guid: 6cec86fe7a7d356499344ccf62744470, type: 2}
 --- !u!1 &4234018803867319430
 GameObject:
   m_ObjectHideFlags: 0
