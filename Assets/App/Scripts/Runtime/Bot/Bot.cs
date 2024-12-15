@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Linq;
 using UnityEditor.XR;
 using UnityEngine;
 public class Bot : MonoBehaviour
@@ -9,21 +8,13 @@ public class Bot : MonoBehaviour
     [SerializeField] RSO_PlayerNameList _playerNameList;
     [SerializeField] RSO_PlayerPositionList _playerPositionList;
     [SerializeField] RSO_PlayerOffsetList _playerOffsetList;
-    [SerializeField] private RSO_PlayerName playerNameRSO;
-    [SerializeField] private RSO_DictBallCount dictBallReceiveCountRSO;
-
-
-
-
-
 
     [Header("Output")]
     [SerializeField] private RSO_PlayerSelectedName playerSelectedNameRSO;
     [SerializeField] private RSO_PlayerSelectedPosition playerSelectedPositionRSO;
     [SerializeField] private RSE_PlayerSelected playerSelectedRSE;
     [Header("References")]
-    [SerializeField] RSO_GameParameter RSO_GameParameter;
-
+    //[SerializeField] HaveBall haveBall;
     //[Space(10)]
     // RSO
     [SerializeField] RSO_BallCurrentEntity RSO_BallCurrentEntity;
@@ -32,10 +23,11 @@ public class Bot : MonoBehaviour
 
     //[Header("Input")]
     [SerializeField] private RSE_BallCatch ballCatchRSE;
-
+    [SerializeField] private RSE_OnBotMessageSend OnBotMessageSend;
 
 
     //[Header("Output")]
+
 
     public bool HadBall { get; set; } = false;
 
@@ -44,8 +36,6 @@ public class Bot : MonoBehaviour
     private void Start()
     {
         StartDelayBefore();
-
-        
     }
 
     public void StartDelayBefore()
@@ -65,72 +55,26 @@ public class Bot : MonoBehaviour
 
     public void GetRandomTarget()
     {
-        dictBallReceiveCountRSO.Value[gameObject.name]++;
+        int index = Random.Range(0, _playerNameList.Value.Count);
 
-        if (RSO_GameParameter.Value.difficulty == difficulty_mode.NORMAL)
+        var random = _playerNameList.Value[index];
+
+        while(random == null || gameObject.name == random)
         {
-            var differentKeys = dictBallReceiveCountRSO.Value.Keys.Where(key => key != gameObject.name /*|| key != playerNameRSO.Value*/);
-            var smallestKey = differentKeys.OrderBy(key => dictBallReceiveCountRSO.Value[key]).FirstOrDefault();
-            int indexToHit = _playerNameList.Value.IndexOf(smallestKey);
+            index = Random.Range(0, _playerNameList.Value.Count);
 
-            var targetpositionNormal = _playerPositionList.Value[indexToHit];
-            Debug.Log($"Count Smallest Value: {dictBallReceiveCountRSO.Value[smallestKey]}");
-            playerSelectedNameRSO.Value = smallestKey;
-            playerSelectedPositionRSO.Value = targetpositionNormal - _playerOffsetList.Value[indexToHit];
-
-            playerSelectedRSE.Call();
-
-            throwBall = false;
-
-            return;
-        }
-        else if(RSO_GameParameter.Value.difficulty == difficulty_mode.HARD)
-        {
-            if (dictBallReceiveCountRSO.Value[playerNameRSO.Value] >= 2)
-            {
-                var differentKeys = dictBallReceiveCountRSO.Value.Keys.Where(key => key != gameObject.name || key != playerNameRSO.Value);
-                var smallestKey = differentKeys.OrderBy(key => dictBallReceiveCountRSO.Value[key]).FirstOrDefault();
-                int indexToHit = _playerNameList.Value.IndexOf(smallestKey);
-
-                var targetpositionNormal = _playerPositionList.Value[indexToHit];
-
-                playerSelectedNameRSO.Value = smallestKey;
-                playerSelectedPositionRSO.Value = targetpositionNormal - _playerOffsetList.Value[indexToHit];
-
-                playerSelectedRSE.Call();
-
-                throwBall = false;
-                return;
-
-            }
-            else {
-                int index = Random.Range(0, _playerNameList.Value.Count);
-
-                var random = _playerNameList.Value[index];
-
-
-
-                while (random == null || gameObject.name == random)
-                {
-                    index = Random.Range(0, _playerNameList.Value.Count);
-
-                    random = _playerNameList.Value[index];
-                }
-
-                var targetposition = _playerPositionList.Value[index];
-
-                playerSelectedNameRSO.Value = random;
-                playerSelectedPositionRSO.Value = targetposition - _playerOffsetList.Value[index];
-
-                playerSelectedRSE.Call();
-
-                throwBall = false;
-            }
+            random = _playerNameList.Value[index];
         }
 
-        }
+        var targetposition = _playerPositionList.Value[index];
 
+        playerSelectedNameRSO.Value = random;
+        playerSelectedPositionRSO.Value = targetposition - _playerOffsetList.Value[index];
 
+        playerSelectedRSE.Call();
+
+        throwBall = false;
+    }
 
     private void OnEnable()
     {

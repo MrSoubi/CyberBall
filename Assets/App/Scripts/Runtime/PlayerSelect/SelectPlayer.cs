@@ -12,11 +12,6 @@ public class SelectPlayer : MonoBehaviour
     [SerializeField] private RSE_QTECall qTECallRSE;
     [SerializeField] private RSO_BallCurrentEntity ballCurrentEntityRSO;
     [SerializeField] private RSO_PlayerName playerNameRSO;
-    [SerializeField] RSO_PlayerNameList _playerNameList;
-    [SerializeField] private RSO_DictBallCount dictBallReceiveCountRSO;
-
-
-
 
     private void OnMouseDown()
     {
@@ -30,15 +25,10 @@ public class SelectPlayer : MonoBehaviour
     {
         if(ballCurrentEntityRSO.Value == playerNameRSO.Value)
         {
-            
-            dictBallReceiveCountRSO.Value[playerNameRSO.Value]++;
-
             playerSelectedNameRSO.Value = gameObject.name;
             playerSelectedPositionRSO.Value = transform.position - offset;
 
             qTECallRSE.Call();
         }
     }
-
-    
 }

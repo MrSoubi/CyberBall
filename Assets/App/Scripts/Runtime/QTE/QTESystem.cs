@@ -12,21 +12,20 @@ public class QTESystem : MonoBehaviour
     private int scoreMax = 5;
     private int currentScore;
     private KeyCode validKeyCode;
+    private bool hasQTE = true;
     private bool QTERunning = false;
 
     //[Header("References")]
-    [Header("RSO")]
-    [SerializeField] private RSO_GameParameter gameParameter;
-    [SerializeField] private RSO_ScoreMaxQTE scoreMaxQTE;
-    [SerializeField] private RSO_CurrentScoreQTE currentScoreQTE;
-    [SerializeField] private RSO_ValidKeyCodeQTE validKeyCodeQTE;
+
     [Header("Input")]
     [SerializeField] private RSE_QTECall eventQTECall;
-    
+
     [Header("Output")]
     [SerializeField] private RSE_QTESucced eventQTESucced;
     [SerializeField] private RSE_QTEFailed eventQTEFailed;
-    
+    [SerializeField] private RSO_ScoreMaxQTE scoreMaxQTE;
+    [SerializeField] private RSO_CurrentScoreQTE currentScoreQTE;
+    [SerializeField] private RSO_ValidKeyCodeQTE validKeyCodeQTE;
     private void OnEnable()
     {
         eventQTECall.action += CheckLaunchQTE;
@@ -93,7 +92,7 @@ public class QTESystem : MonoBehaviour
 
     public void CheckLaunchQTE()
     {
-        if (gameParameter.Value.difficulty == difficulty_mode.HARD)
+        if (hasQTE)
         {
             if (QTERunning) StopAllCoroutines();
             currentScore = 0;

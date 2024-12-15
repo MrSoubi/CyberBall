@@ -14,15 +14,12 @@ public class HaveBall : MonoBehaviour
     [SerializeField] private RSO_PlayerOffsetList playerOffsetListRSO;
     [SerializeField] private RSO_BallCurrentEntity ballCurrentEntityRSO;
     [SerializeField] private RSO_BallStartPosition ballStartPositionRSO;
-    [SerializeField] private RSO_DictBallCount dictBallReceiveCountRSO;
 
     private void Awake()
     {
         playerNameListRSO.Value.Add(gameObject.name);
         playerPositionListRSO.Value.Add(transform.position);
         playerOffsetListRSO.Value.Add(offset);
-        dictBallReceiveCountRSO.Value.Add(gameObject.name, 0);
-
 
         if (startBall)
         {
@@ -34,7 +31,6 @@ public class HaveBall : MonoBehaviour
         {
             playerNameRSO.Value = gameObject.name;
         }
-
     }
 
     private void OnDisable()
@@ -42,6 +38,5 @@ public class HaveBall : MonoBehaviour
         playerNameListRSO.Value.Clear();
         playerPositionListRSO.Value.Clear();
         playerOffsetListRSO.Value.Clear();
-        dictBallReceiveCountRSO.Value.Clear();
     }
 }
