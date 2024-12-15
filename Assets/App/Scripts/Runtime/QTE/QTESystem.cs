@@ -15,17 +15,18 @@ public class QTESystem : MonoBehaviour
     private bool QTERunning = false;
 
     //[Header("References")]
-
-    [Header("Input")]
-    [SerializeField] private RSE_QTECall eventQTECall;
+    [Header("RSO")]
     [SerializeField] private RSO_GameParameter gameParameter;
-
-    [Header("Output")]
-    [SerializeField] private RSE_QTESucced eventQTESucced;
-    [SerializeField] private RSE_QTEFailed eventQTEFailed;
     [SerializeField] private RSO_ScoreMaxQTE scoreMaxQTE;
     [SerializeField] private RSO_CurrentScoreQTE currentScoreQTE;
     [SerializeField] private RSO_ValidKeyCodeQTE validKeyCodeQTE;
+    [Header("Input")]
+    [SerializeField] private RSE_QTECall eventQTECall;
+    
+    [Header("Output")]
+    [SerializeField] private RSE_QTESucced eventQTESucced;
+    [SerializeField] private RSE_QTEFailed eventQTEFailed;
+    
     private void OnEnable()
     {
         eventQTECall.action += CheckLaunchQTE;
