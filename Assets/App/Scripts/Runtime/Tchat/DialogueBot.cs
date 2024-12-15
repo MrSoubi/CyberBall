@@ -79,7 +79,7 @@ public class DialogueBot : MonoBehaviour
             DisplayDialogue(text);
             //var tchat = new TchatOut();
 
-            textScrollView.text += $"[{botName}]: " + text + "\n";
+            textScrollView.text += $"[{botName}]:\u00A0{text}\n";
 
 
             //tchat.MessageContent = text;

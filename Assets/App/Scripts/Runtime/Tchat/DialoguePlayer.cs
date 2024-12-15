@@ -65,7 +65,7 @@ public class DialoguePlayer : MonoBehaviour
             GameAction action = new GameAction("player2", "sendMessage", "content:" + userInput);
             rseAddGameAction.Call(action);
 
-            textScrollView.text += "[Player2]: " + userInput +"\n";
+            textScrollView.text += $"[Player2]:\u00A0{userInput}\n";
 
             DisplayDialogue(userInput);
             inputField.text = "";
