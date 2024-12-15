@@ -50,9 +50,9 @@ public class GameAction
 
 public enum PlayerGender
 { 
-    Homme,
-    Femme,
-    Non_Binaire,
-    Autre,
-    Ne_Se_Prononce_Pas
+    Homme = 0,
+    Femme = 1,
+    Non_Binaire = 2,
+    Autre = 3,
+    Ne_Se_Prononce_Pas = 4
 }
