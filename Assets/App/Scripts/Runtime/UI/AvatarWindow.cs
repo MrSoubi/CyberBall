@@ -5,7 +5,7 @@ public class AvatarWindow : MonoBehaviour
     //[Header("Settings")]
 
     [Header("References")]
-    [SerializeField] private RSO_GameParameter rseGameParameter;
+    [SerializeField] private RSO_GameParameter rsoGameParameter;
 
     //[Space(10)]
     // RSO
@@ -18,10 +18,15 @@ public class AvatarWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log(rseGameParameter.Value.is_avatar_selection_enabled);
-        if (!rseGameParameter.Value.is_avatar_selection_enabled)
+        Debug.Log(rsoGameParameter.Value.is_avatar_selection_enabled);
+        if (!rsoGameParameter.Value.is_avatar_selection_enabled)
         {
             nextWindow.Invoke();
         }
+    }
+
+    public void SetAvatarWithIndex(int index)
+    {
+        rsoGameParameter.Value.avatar_selection = (avatar)index;
     }
 }
