@@ -9,6 +9,7 @@ public class GameParameter
     public float default_chat_message_duration;
 
     public bool is_avatar_selection_enabled;
+    public avatar_mode avatar_mode;
     public avatar avatar_selection;
     
     public difficulty_mode difficulty;
@@ -17,6 +18,14 @@ public class GameParameter
     public bool is_gender_question_enabled;
     
     public Comment[] comments;
+}
+
+[Serializable]
+public enum avatar_mode
+{
+    LIBRE,
+    FEMMEHYPERSEXUALISE,
+    HOMMEHYPERSEXUALISE
 }
 
 [Serializable]
