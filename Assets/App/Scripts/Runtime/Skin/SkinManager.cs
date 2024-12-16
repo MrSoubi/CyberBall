@@ -17,6 +17,14 @@ public class SkinManager : MonoBehaviour
 
     private void SetSkin()
     {
-        
+        if (isPlayer)
+        {
+            spriteRenderer.sprite = ssoSkins.skinsData
+                .Find(o => o.enumAvatar == rsoGameParameter.Value.avatar_selection).sprite;
+        }
+        else
+        {
+            
+        }
     }
 }
