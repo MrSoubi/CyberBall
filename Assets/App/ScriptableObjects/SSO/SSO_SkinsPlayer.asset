@@ -40,4 +40,4 @@ MonoBehaviour:
   - enumAvatar: 12
     sprite: {fileID: 21300000, guid: bd51f7177350a874fbf965158bf429db, type: 3}
   - enumAvatar: 13
-    sprite: {fileID: 21300000, guid: b47269ffe4804e54c9d71b8f4b10b9ea, type: 3}
+    sprite: {fileID: 21300000, guid: 7c59d46c54a6fbb4ba290f3857eb0966, type: 3}

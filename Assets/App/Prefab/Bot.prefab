@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 61.2}
+  m_AnchoredPosition: {x: 0, y: 86.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1144647557673790323
@@ -150,7 +150,6 @@ GameObject:
   - component: {fileID: 8327156004523897275}
   - component: {fileID: 8335286125010348240}
   - component: {fileID: 6477741381754877822}
-  - component: {fileID: 1145616611060605523}
   m_Layer: 0
   m_Name: Bot
   m_TagString: Untagged
@@ -218,8 +217,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6c23e1a360a49064186c74c7cd3669fc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -267,7 +266,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.08, y: 1.92}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -342,23 +341,6 @@ MonoBehaviour:
   RSO_BallCurrentEntity: {fileID: 11400000, guid: 3da4f17468bdf1746ac22f21b9d64373, type: 2}
   ballCatchRSE: {fileID: 11400000, guid: 39cf95260db20b242abd616d65d49cf5, type: 2}
   throwBall: 0
---- !u!114 &1145616611060605523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4410566935525130608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ea5df762fed004f8657af9cc59fe0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayer: 0
-  iDCharacter: 0
-  ssoSkins: {fileID: 11400000, guid: eff85c1e3da546149831fd9c6ce366a0, type: 2}
-  rsoGameParameter: {fileID: 11400000, guid: 64b1ed078971011468d9d4fc2903ad9c, type: 2}
-  spriteRenderer: {fileID: 7318019469711268527}
 --- !u!1 &6789970269818830240
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,6 @@ public class SSO_Skins : ScriptableObject
 [System.Serializable]
 public struct SkinData
 {
-    public avatar enumAvatar;
+    public avatar_selected enumAvatar;
     [PreviewField]public Sprite sprite;
 }

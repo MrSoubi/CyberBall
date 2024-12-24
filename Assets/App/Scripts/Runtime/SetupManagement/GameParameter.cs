@@ -9,8 +9,8 @@ public class GameParameter
     public float default_chat_message_duration;
 
     public bool is_avatar_selection_enabled;
-    public avatar_mode avatar_mode;
-    public avatar avatar_selection;
+    public avatar avatar_mode;
+    public avatar_selected avatar_selection;
     
     public difficulty_mode difficulty;
     public inclusivity_mode inclusivity;
@@ -21,7 +21,7 @@ public class GameParameter
 }
 
 [Serializable]
-public enum avatar_mode
+public enum avatar
 {
     LIBRE,
     FEMMEHYPERSEXUALISE,
@@ -29,7 +29,7 @@ public enum avatar_mode
 }
 
 [Serializable]
-public enum avatar
+public enum avatar_selected
 {
     HOMME1,
     HOMME2,

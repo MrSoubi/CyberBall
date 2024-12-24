@@ -21,13 +21,13 @@ public class AvatarWindow : MonoBehaviour
 
         switch (rsoGameParameter.Value.avatar_mode)
         {
-            case avatar_mode.LIBRE:
+            case avatar.LIBRE:
                 normalPanel.SetActive(true); 
                 break;
-            case avatar_mode.HOMMEHYPERSEXUALISE:
+            case avatar.HOMMEHYPERSEXUALISE:
                 malePanel.SetActive(true);
                 break;
-            case avatar_mode.FEMMEHYPERSEXUALISE:
+            case avatar.FEMMEHYPERSEXUALISE:
                 femalePanel.SetActive(true);
                 break;
             default: break;
@@ -36,6 +36,6 @@ public class AvatarWindow : MonoBehaviour
 
     public void SetAvatarWithIndex(int index)
     {
-        rsoGameParameter.Value.avatar_selection = (avatar)index;
+        rsoGameParameter.Value.avatar_selection = (avatar_selected)index;
     }
 }
