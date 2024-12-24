@@ -50,8 +50,7 @@ public class DialoguePlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         gameObject.SetActive(false);
-        inputField.text = "";
-
+        dialoguePlayerText.text = "";
     }
 
     public void OnSendText()
