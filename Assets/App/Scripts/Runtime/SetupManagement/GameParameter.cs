@@ -1,4 +1,5 @@
 using System;
+using UnityEngine.Serialization;
 
 [Serializable]
 public class GameParameter
@@ -10,7 +11,7 @@ public class GameParameter
 
     public bool is_avatar_selection_enabled;
     public avatar avatar_mode;
-    public avatar_selected avatar_selection;
+    public avatar_selected avatar_selected;
     
     public difficulty_mode difficulty;
     public inclusivity_mode inclusivity;
@@ -24,8 +25,8 @@ public class GameParameter
 public enum avatar
 {
     LIBRE,
-    FEMMEHYPERSEXUALISE,
-    HOMMEHYPERSEXUALISE
+    HOMMEHYPERSEXUALISE,
+    FEMMEHYPERSEXUALISE
 }
 
 [Serializable]

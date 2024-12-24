@@ -36,6 +36,6 @@ public class AvatarWindow : MonoBehaviour
 
     public void SetAvatarWithIndex(int index)
     {
-        rsoGameParameter.Value.avatar_selection = (avatar_selected)index;
+        rsoGameParameter.Value.avatar_selected = (avatar_selected)index;
     }
 }

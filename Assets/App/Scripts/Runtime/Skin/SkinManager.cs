@@ -10,5 +10,5 @@ public class SkinManager : MonoBehaviour
 
     private void SetSkin() =>
         spriteRenderer.sprite = ssoSkins.skinsData
-            .Find(o => o.enumAvatar == rsoGameParameter.Value.avatar_selection).sprite;
+            .Find(o => o.enumAvatar == rsoGameParameter.Value.avatar_selected).sprite;
 }
