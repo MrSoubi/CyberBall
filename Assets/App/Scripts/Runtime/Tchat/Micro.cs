@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Micro : MonoBehaviour
@@ -9,6 +10,7 @@ public class Micro : MonoBehaviour
     [SerializeField] Image microImage;
 
     [SerializeField] RSE_SetActiveMicro rseActiveMicro;
+    private IPointerClickHandler _pointerClickHandlerImplementation;
 
     private void OnEnable()
     {
@@ -21,7 +23,7 @@ public class Micro : MonoBehaviour
 
     void SetActiveMicro(bool active)
     {
-        gameObject.SetActive(active);
+        microImage.gameObject.SetActive(active);
     }
 
     public void OnClick()

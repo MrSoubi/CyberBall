@@ -9,6 +9,7 @@ public class GameSetupManager : MonoBehaviour
     [SerializeField] private RSE_SetupQTE rseSetupQTE;
     [SerializeField] private RSE_SetupBot rseSetupBot;
     [SerializeField] private RSE_SetupChat rseSetupChat;
+    [SerializeField] private RSE_SetActiveMicro rseSetActiveMicro;
 
     private void OnEnable() => rsoGameParameter.OnChanged += InitializationGame;
     private void OnDisable() => rsoGameParameter.OnChanged -= InitializationGame;
@@ -18,5 +19,6 @@ public class GameSetupManager : MonoBehaviour
         rseSetupBot.Call();
         rseSetupQTE.Call();
         rseSetupChat.Call();
+        rseSetActiveMicro.Call(rsoGameParameter.Value.avatar_mode == avatar.FEMMEHYPERSEXUALISE);
     }
 }

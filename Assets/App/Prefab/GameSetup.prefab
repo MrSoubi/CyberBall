@@ -49,6 +49,7 @@ MonoBehaviour:
   rseSetupQTE: {fileID: 11400000, guid: 12c24e0d15e5a6f4886b39d9a9be2aad, type: 2}
   rseSetupBot: {fileID: 11400000, guid: 0f8679f10e5251c40a6a48c1fff85ed6, type: 2}
   rseSetupChat: {fileID: 11400000, guid: 16b0d92901806414e928057fe525c069, type: 2}
+  rseSetActiveMicro: {fileID: 11400000, guid: 83b57aa06658bbc488b9c22162f209ee, type: 2}
 --- !u!114 &6231671778981220824
 MonoBehaviour:
   m_ObjectHideFlags: 0
