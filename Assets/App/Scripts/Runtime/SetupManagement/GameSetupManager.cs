@@ -19,6 +19,6 @@ public class GameSetupManager : MonoBehaviour
         rseSetupBot.Call();
         rseSetupQTE.Call();
         rseSetupChat.Call();
-        rseSetActiveMicro.Call(rsoGameParameter.Value.avatar_mode == avatar.FEMMEHYPERSEXUALISE);
+        rseSetActiveMicro.Call(rsoGameParameter.Value.avatar_selection == avatar.FEMMEHYPERSEXUALISE);
     }
 }

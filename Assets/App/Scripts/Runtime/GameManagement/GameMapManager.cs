@@ -22,7 +22,7 @@ public class GameMapManager : MonoBehaviour
     {
         for (int i = 0; i < objectsToActivate.Length; i++)
         {
-            objectsToActivate[i].SetActive(true);
+            objectsToActivate[i]?.SetActive(true);
         }
     }
 

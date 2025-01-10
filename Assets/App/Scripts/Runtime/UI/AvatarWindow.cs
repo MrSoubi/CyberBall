@@ -19,7 +19,7 @@ public class AvatarWindow : MonoBehaviour
             nextWindow.Invoke();
         }
 
-        switch (rsoGameParameter.Value.avatar_mode)
+        switch (rsoGameParameter.Value.avatar_selection)
         {
             case avatar.LIBRE:
                 normalPanel.SetActive(true); 

@@ -27,7 +27,9 @@ public class FileReader : MonoBehaviour
         Encoding encoding = Encoding.GetEncoding(28591);
         print(System.IO.File.Exists(filePath));
         string infoData = System.IO.File.ReadAllText(filePath);
-        rsoGameParameter.Value = JsonUtility.FromJson<GameParameter>(infoData);
+        var classe =JsonUtility.FromJson<GameParameter>(infoData);
+        classe.is_avatar_selection_enabled = true;
+        rsoGameParameter.Value = classe;
         print(rsoGameParameter.Value.nb_throws);
     }
 }

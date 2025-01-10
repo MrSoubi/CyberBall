@@ -10,7 +10,7 @@ public class GameParameter
     public float default_chat_message_duration;
 
     public bool is_avatar_selection_enabled;
-    public avatar avatar_mode;
+    public avatar avatar_selection;
     public avatar_selected avatar_selected;
     
     public difficulty_mode difficulty;

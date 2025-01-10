@@ -18,6 +18,11 @@ public class HaveBall : MonoBehaviour
 
     private void Awake()
     {
+        if (playerNameListRSO.Value == null) playerNameListRSO.Value = new();
+        if (playerPositionListRSO.Value == null) playerPositionListRSO.Value = new();
+        if (playerOffsetListRSO.Value == null) playerOffsetListRSO.Value = new();
+        if (dictBallReceiveCountRSO.Value == null) dictBallReceiveCountRSO.Value = new();
+        
         playerNameListRSO.Value.Add(gameObject.name);
         playerPositionListRSO.Value.Add(transform.position);
         playerOffsetListRSO.Value.Add(offset);
