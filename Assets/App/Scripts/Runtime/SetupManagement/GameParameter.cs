@@ -46,6 +46,7 @@ public enum avatar_selected
     FEMMEHYPERSEXUALISE2,
     FEMMEHYPERSEXUALISE3,
     FEMMEHYPERSEXUALISE4,
+    ANDROGYNE
 }
 
 [Serializable]
