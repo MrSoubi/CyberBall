@@ -19,8 +19,10 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 0a1749eeba9c9d14fbfa1fa8aa299cbd, type: 3}
   - enumAvatar: 2
     sprite: {fileID: 21300000, guid: 85b205a9d24d7b1469ed430444ba32a6, type: 3}
-  - enumAvatar: 4
+  - enumAvatar: 3
     sprite: {fileID: 21300000, guid: ef72739e4a580b94e8d8458ed7ce5977, type: 3}
+  - enumAvatar: 4
+    sprite: {fileID: 21300000, guid: 82626aa0c3636134fb00b1adc3d9e9eb, type: 3}
   - enumAvatar: 5
     sprite: {fileID: 21300000, guid: 4977a0d883d5f9148aa8404275af3288, type: 3}
   - enumAvatar: 6
